@@ -1,0 +1,9 @@
+[package]
+name = "n_words"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+random_word = { version = "0.4.3", features = ["en"] }
+word_map = { path="../../lib"}

@@ -1,50 +1,13 @@
-mod block;
-mod grid;
+extern crate word_map;
 
-use crate::block::Block;
+// use word_map::block::Block;
 use rand::Rng;
-
-#[derive(Clone, Debug)]
-struct Point2d {
-    x: f32,
-    y: f32,
-}
-
-#[derive(Debug)]
-enum Orientation {
-    Horizontal,
-    Vertical,
-}
-
-impl<'a> Block<'a> {
-    fn new(text: &'a str, area: f32, origin: Point2d, orientation: Orientation) -> Self {
-        let width = 24_f32 * text.len() as f32;
-        let height = area / width;
-
-        let bottom_left = origin.clone();
-
-        let top_right = Point2d {
-            x: origin.x + width,
-            y: origin.y - height,
-        };
-
-        Block {
-            area,
-            // width,
-            // height,
-            text,
-            bottom_left,
-            top_right,
-            orientation,
-        }
-    }
-}
+use word_map::grid::Grid;
 
 static SCALE: f32 = 1_f32;
 static WIDTH: f32 = 800f32;
 static HEIGHT: f32 = 600f32;
 
-use crate::grid::Grid;
 
 fn main() {
     use random_word::Lang;
@@ -56,7 +19,6 @@ fn main() {
     <svg version=\"1.1\"
       width=\"{WIDTH}\"
       height=\"{HEIGHT}\"
-      viewBox=\"0 0 1200 518\"
       xmlns=\"http://www.w3.org/2000/svg\"
     >");
     println!("<g>");

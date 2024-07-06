@@ -1,8 +1,18 @@
-[package]
-name = "word_map"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+resolver = "2"
+members = [
+  "./lib",
+  "./examples/n_words"
+]
 
-[dependencies]
-rand = "0.8.5"
-random_word = { version = "0.4.3", features = ["en"] }
+[workspace.package]
+authors = ["martin <martinfrances107@hotmail.com>"]
+categories = ["graphics", "Mathematics"]
+edition = "2021"
+keywords = ["diagram", "graphics"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/martinfrances107/rust_d3_geo"
+version = "2.0.12"
+# Version 1.65 is required as this package makes use of "Generic Associated Types".
+rust-version = "1.65"

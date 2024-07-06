@@ -2,17 +2,18 @@ use rand::{rngs::ThreadRng, Rng};
 
 use crate::{block::Block, Orientation, Point2d};
 
-pub(crate) struct Grid<'a> {
+pub struct Grid<'a> {
     rng: ThreadRng,
     width: f32,
     height: f32,
     // top_right: Point2d,
     // bottom_left: Point2d,
-    pub(crate) blocks: Vec<Block<'a>>,
+    pub blocks: Vec<Block<'a>>,
 }
 
 impl<'a> Grid<'a> {
-    pub(crate) fn new(width: f32, height: f32) -> Self {
+    /// Returns a grid object given the dimension of the canvas/svg
+    pub fn new(width: f32, height: f32) -> Self {
         Self {
             rng: rand::thread_rng(),
             // bottom_left: Point2d { x: 0_f32, y: 0_f32 },
@@ -37,11 +38,11 @@ impl<'a> Grid<'a> {
         Point2d { x, y }
     }
 
-    // Generate candidate blocks and fit them into the GRID.
-    //
-    // WARNING:
-    // O(n^2) operation
-    pub(crate) fn place_block(&mut self, text: &'a str, area: f32) -> bool {
+    /// Generate candidate blocks and fit them into the GRID.
+    ///
+    /// WARNING:
+    /// O(n^2) operation
+    pub fn place_block(&mut self, text: &'a str, area: f32) -> bool {
         // Give a block 3x100 attempts to get placed.
         // 2 orientations
         for _ in 0..100 {

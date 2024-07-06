@@ -3,7 +3,7 @@ use core::fmt::{self, Display};
 use crate::{Orientation, Point2d};
 
 #[derive(Debug)]
-pub(crate) struct Block<'a> {
+pub struct Block<'a> {
     pub(crate) area: f32,
     // pub(crate) width: f32,
     // pub(crate) height: f32,
@@ -11,6 +11,31 @@ pub(crate) struct Block<'a> {
     pub(crate) top_right: Point2d,
     pub(crate) bottom_left: Point2d,
     pub(crate) orientation: Orientation,
+}
+
+
+impl<'a> Block<'a> {
+  pub(crate) fn new(text: &'a str, area: f32, origin: Point2d, orientation: Orientation) -> Self {
+      let width = 24_f32 * text.len() as f32;
+      let height = area / width;
+
+      let bottom_left = origin.clone();
+
+      let top_right = Point2d {
+          x: origin.x + width,
+          y: origin.y - height,
+      };
+
+      Block {
+          area,
+          // width,
+          // height,
+          text,
+          bottom_left,
+          top_right,
+          orientation,
+      }
+  }
 }
 
 impl<'a> Block<'a> {
