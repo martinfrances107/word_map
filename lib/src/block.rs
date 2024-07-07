@@ -3,42 +3,47 @@ use core::fmt::{self, Display};
 use crate::{Orientation, Point2d};
 
 #[derive(Debug)]
-pub struct Block<'a> {
+pub struct Block {
     pub(crate) area: f32,
-    // pub(crate) width: f32,
-    // pub(crate) height: f32,
-    pub(crate) text: &'a str,
+    pub(crate) text: String,
     pub(crate) top_right: Point2d,
     pub(crate) bottom_left: Point2d,
     pub(crate) orientation: Orientation,
 }
 
+// converts the height of a character to its width
+//
+// TIMES NEW ROMAN
+static W_TO_H_RATIO: f32 = 50_f32 / 83_f32;
 
-impl<'a> Block<'a> {
-  pub(crate) fn new(text: &'a str, area: f32, origin: Point2d, orientation: Orientation) -> Self {
-      let width = 24_f32 * text.len() as f32;
-      let height = area / width;
+impl Block {
+    pub(crate) fn new(text: String, area: f32, origin: Point2d, orientation: Orientation) -> Self {
 
-      let bottom_left = origin.clone();
+        let height = Self::h(area, text.len() as f32);
+        let width = area / height;
 
-      let top_right = Point2d {
-          x: origin.x + width,
-          y: origin.y - height,
-      };
+        let bottom_left = origin.clone();
 
-      Block {
-          area,
-          // width,
-          // height,
-          text,
-          bottom_left,
-          top_right,
-          orientation,
-      }
-  }
-}
+        let top_right = Point2d {
+            x: origin.x + width,
+            y: origin.y - height,
+        };
 
-impl<'a> Block<'a> {
+        Block {
+            area,
+            text,
+            bottom_left,
+            top_right,
+            orientation,
+        }
+    }
+
+    // Compute the height/font-size given area and the number of characters.
+    fn h(area: f32, n_chars: f32) -> f32 {
+        let h2 = area / (W_TO_H_RATIO * n_chars);
+        h2.sqrt()
+    }
+
     fn is_inside(&self, point: &Point2d) -> bool {
         // println!(
         //     "x test {} {} - px {} {}",self.bottom_left.x, self.top_right.x , point.x,
@@ -86,7 +91,7 @@ impl<'a> Block<'a> {
 // Coord system translation.
 // for performance bottom-left is used for the the text x,y without further computation.
 // rectangle and circle points further need computation.
-impl<'a> Display for Block<'a> {
+impl Display for Block {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let width = self.top_right.x - self.bottom_left.x;
         let height = self.bottom_left.y - self.top_right.y;
@@ -111,8 +116,8 @@ impl<'a> Display for Block<'a> {
         )?;
         writeln!(
             f,
-            "<text x=\"{}\" y=\"{}\" >{}</text>",
-            self.bottom_left.x, self.bottom_left.y, self.text
+            "<text x=\"{}\"  y=\"{}\" font-size=\"{}\" >{}</text>",
+            self.bottom_left.x, self.bottom_left.y, height, self.text
         )
     }
 }
@@ -168,11 +173,11 @@ mod test {
             ),
         ];
 
-        static BLOCK: Block<'static> = Block {
+        static BLOCK: Block = Block {
             area: 100_f32 * 100_f32,
             // width: 100_f32,
             // height: 100_f32,
-            text: &"M",
+            text: String("M"),
             top_right: Point2d {
                 x: 200_f32,
                 y: 100_f32,

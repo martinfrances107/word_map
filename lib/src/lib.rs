@@ -1,5 +1,5 @@
-pub mod grid;
 pub(crate) mod block;
+pub mod grid;
 
 #[derive(Clone, Debug)]
 struct Point2d {
