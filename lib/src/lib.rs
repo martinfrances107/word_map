@@ -10,5 +10,10 @@ struct Point2d {
 #[derive(Debug)]
 enum Orientation {
     Horizontal,
-    Vertical,
+    // A rotation of 90 clockwise
+    // Text runs Downwards.
+    Vertical90,
+    // A rotation of 90 clockwise
+    // Text runs Upwards.
+    Vertical270,
 }

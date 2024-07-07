@@ -19,14 +19,52 @@ static W_TO_H_RATIO: f32 = 50_f32 / 83_f32;
 impl Block {
     pub(crate) fn new(text: String, area: f32, origin: Point2d, orientation: Orientation) -> Self {
 
-        let height = Self::h(area, text.len() as f32);
-        let width = area / height;
+        let text_height = Self::h(area, text.len() as f32);
+        let text_width = area / text_height;
 
-        let bottom_left = origin.clone();
+        let (bottom_left, top_right) = match orientation{
+          Orientation::Horizontal => {
+            // Horizontal text
+            // zero rotation.
+            // text pivot points is bottom-left
+            let bottom_left = origin.clone();
 
-        let top_right = Point2d {
-            x: origin.x + width,
-            y: origin.y - height,
+            let top_right = Point2d {
+                x: origin.x + text_width,
+                y: origin.y - text_height,
+            };
+            (bottom_left, top_right)
+          }
+          Orientation::Vertical90 => {
+            // Downwards text
+            // rotate text 90 degress and text pivot point is
+            // the top right corner.
+            let bottom_left = Point2d {
+              x: origin.x,
+              y: origin.y + text_width
+            };
+            let top_right = Point2d {
+              x: origin.x + text_height,
+              y: origin.y
+            };
+
+            (bottom_left, top_right)
+          },
+          Orientation::Vertical270 => {
+            // Upwards text
+            // rotate text 90 degrees clockwise and text pivot point is
+            // the bottom right corner.
+            let bottom_left = Point2d {
+              x: origin.x - text_height,
+              y: origin.y
+            };
+            let top_right = Point2d {
+              x: origin.x,
+              y: origin.y - text_width
+            };
+
+            (bottom_left, top_right)
+          }
         };
 
         Block {
@@ -45,14 +83,6 @@ impl Block {
     }
 
     fn is_inside(&self, point: &Point2d) -> bool {
-        // println!(
-        //     "x test {} {} - px {} {}",self.bottom_left.x, self.top_right.x , point.x,
-        //     self.bottom_left.x < point.x && self.top_right.x > point.x
-        // );
-        // println!(
-        //     "y test {}",
-        //     self.bottom_left.y > point.y && self.top_right.y < point.y
-        // );
         self.bottom_left.x < point.x
             && self.top_right.x > point.x
             && self.bottom_left.y > point.y
@@ -93,11 +123,14 @@ impl Block {
 // rectangle and circle points further need computation.
 impl Display for Block {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        let width = self.top_right.x - self.bottom_left.x;
-        let height = self.bottom_left.y - self.top_right.y;
+        // rec width is not text width.
+        let rec_width = self.top_right.x - self.bottom_left.x;
+        // rec_height is not text height.
+        let rec_height = self.bottom_left.y - self.top_right.y;
 
+        // top left
         let rect_x = self.bottom_left.x;
-        let rect_y = self.bottom_left.y - height;
+        let rect_y = self.bottom_left.y - rec_height;
 
         writeln!(
             f,
@@ -112,13 +145,43 @@ impl Display for Block {
         writeln!(
             f,
             "<rect x=\"{}\" y=\"{}\" fill=\"none\" stroke=\"red\" width=\"{}\" height=\"{}\"/>",
-            rect_x, rect_y, width, height
+            rect_x, rect_y, rec_width, rec_height
         )?;
-        writeln!(
-            f,
-            "<text x=\"{}\"  y=\"{}\" font-size=\"{}\" >{}</text>",
-            self.bottom_left.x, self.bottom_left.y, height, self.text
-        )
+
+        match self.orientation{
+          Orientation::Horizontal => {
+            writeln!(
+              f,
+              "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\" >{}</text>",
+              self.bottom_left.x, self.bottom_left.y, rec_height, self.text
+          )
+          }
+          Orientation::Vertical90 => {
+            // origin is top left
+            let top_left = Point2d{
+              x: self.top_right.x - rec_width,
+              y: self.top_right.y
+            };
+            writeln!(
+              f,
+              "<text transform=\"translate({}, {}) rotate(90)\" font-size=\"{}\" >{}</text>",
+              top_left.x, top_left.y, rec_width, self.text
+          )
+          }
+          Orientation::Vertical270 => {
+            // origin is bottom right
+            let bottom_right = Point2d{
+              x: self.bottom_left.x + rec_width,
+              y: self.bottom_left.y
+            };
+            writeln!(
+              f,
+              "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\" >{}</text>",
+              bottom_right.x, bottom_right.y, rec_width, self.text
+          )
+          }
+        }
+
     }
 }
 
