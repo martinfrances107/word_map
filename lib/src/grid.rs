@@ -42,7 +42,8 @@ impl Grid {
         // 2 orientations
         for _ in 0..100 {
             let origin = self.point_at_random();
-            let mut candidate = Block::new(text.clone(), area, origin, Orientation::Vertical270);
+            let mut candidate =
+                Block::new_randomize_orientation(text.clone(), area, origin, &mut self.rng);
             // Block must be inside the grid/canvas.
             if self.is_inside(&candidate.bottom_left) && self.is_inside(&candidate.top_right) {
                 if !self.is_overlapping(&candidate) {
