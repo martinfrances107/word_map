@@ -12,7 +12,7 @@
 
 * At the moment blocks can be placed outside the grid. ( overlapp is broken )
 
-* Support rendering to a HTML canvas element as well as SVG.
+* Support rendering to a HTML CANVAS element as well as SVG.
 
 * Support vertical Upwards/DownWard text.
 
