@@ -44,15 +44,15 @@ impl Grid {
             let origin = self.point_at_random();
             let mut candidate = Block::new(text.clone(), area, origin, Orientation::Horizontal);
             // Block must be inside the grid/canvas.
-            if self.is_inside(&candidate.bottom_left) || self.is_inside(&candidate.top_right) {
+            if self.is_inside(&candidate.bottom_left) && self.is_inside(&candidate.top_right) {
                 if !self.is_overlapping(&candidate) {
                     self.blocks.push(candidate);
                     return true;
                 } else {
                     candidate.orientation = Orientation::Vertical;
                     if !self.is_overlapping(&candidate) {
-                        self.blocks.push(candidate);
-                        return true;
+                        // self.blocks.push(candidate);
+                        // return true;
                     } else {
                         // Other Vertical Oritienttion downwards/upwards
                     }

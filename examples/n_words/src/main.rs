@@ -8,7 +8,6 @@ static SCALE: f32 = 1_f32;
 static WIDTH: f32 = 800f32;
 static HEIGHT: f32 = 600f32;
 
-
 fn main() {
     use random_word::Lang;
     let mut rng = rand::thread_rng();
@@ -21,7 +20,7 @@ fn main() {
       height=\"{HEIGHT}\"
       xmlns=\"http://www.w3.org/2000/svg\"
     >");
-    println!("<g>");
+    println!("<g font-family=\"Courier\">");
     // Assign a random number to a word selected at random
     for b in 0..900 {
         // input range 1..10 ( no zero width )
@@ -29,9 +28,13 @@ fn main() {
         // assuming a char width of 24px
         // maps to a screen area based on 24x24 squares
         let area = 24_f32 * 24_f32 * rng.gen_range(1_f32..10_f32);
-        let text = random_word::gen(Lang::En);
+        let text = random_word::gen(Lang::En).to_uppercase();
         grid.place_block(text, area);
     }
+
+    // for (text, area) in b {
+    //     grid.place_block(text, area);
+    // }
 
     for b in grid.blocks {
         println!("{}", b)

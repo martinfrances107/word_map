@@ -122,6 +122,15 @@ impl Display for Block {
     }
 }
 
+// let a = vec![
+//   (String::from("TAXI"), 24. * 24. * 6.),
+//   // All A's have the same area per char.
+//   (String::from("A"), 1. * 24. * 24. * 5.),
+//   (String::from("AA"), 2. * 24. * 24. * 5.),
+//   (String::from("AAA"), 3. * 24. * 24. * 5.),
+//   (String::from("AAAAAAAAAA"), 10. * 24. * 24. * 5.)
+// ];
+
 #[cfg(test)]
 mod test {
     use crate::{Orientation, Point2d};
