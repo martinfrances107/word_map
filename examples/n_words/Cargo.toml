@@ -1,7 +1,13 @@
 [package]
 name = "n_words"
-version = "0.1.0"
-edition = "2021"
+authors = { workspace = true }
+categories = ["graphics"]
+description = "A example app from the word_map crate. word/weight pairs selected a random."
+edition = { workspace = true }
+license = { workspace = true }
+readme = { workspace = true }
+repository = { workspace = true }
+version = { workspace = true }
 
 [dependencies]
 rand = "0.8.5"
