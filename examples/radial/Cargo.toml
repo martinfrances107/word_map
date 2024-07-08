@@ -1,8 +1,8 @@
 [package]
-name = "blueprint"
+name = "radial"
 authors = { workspace = true }
 categories = ["graphics"]
-description = "A example app from the word_map crate. word/weight pairs selected a random."
+description = "A example app where large words concentrate at the center."
 edition = { workspace = true }
 license = { workspace = true }
 readme = { workspace = true }

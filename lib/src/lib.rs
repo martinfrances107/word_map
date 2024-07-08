@@ -1,16 +1,16 @@
 use rand::{rngs::ThreadRng, Rng};
 
-pub(crate) mod block;
+pub mod block;
 pub mod grid;
 
 #[derive(Clone, Debug)]
-struct Point2d {
-    x: f32,
-    y: f32,
+pub struct Point2d {
+    pub x: f32,
+    pub y: f32,
 }
 
 #[derive(Debug)]
-enum Orientation {
+pub enum Orientation {
     Horizontal,
     // A rotation of 90 clockwise
     // Text runs Downwards.

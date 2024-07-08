@@ -36,11 +36,27 @@ Generates a world cloud based on a number of (word, weight) pairs selected at ra
 
 <tr>
 <td>
+
+  <strong>examples/radial</strong>
+
+  The library allow the definition of bounding rectangle limiting the placement of new text.
+
+  For example this allow large text blocks to constrained to a central region while small text blocks can be placed over the full page.
+</td>
+
+<td>
+  <img src="https://raw.githubusercontent.com/martinfrances107/word_map/main/images/radial.svg" alt="Large text blocks are centrally placed" title="Large text blocks are centrally placed"/>
+</td>
+
+</tr>
+
+<tr>
+<td>
   TODO: A website width a word cloud selected supplied by a text file
 </td>
 
 <td>
-  IMG2
+  IMG3
 </td>
 
 </tr>

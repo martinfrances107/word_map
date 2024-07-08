@@ -2,7 +2,8 @@
 resolver = "2"
 members = [
   "./lib",
-  "./examples/n_words"
+  "./examples/blueprint",
+  "./examples/radial"
 ]
 
 [workspace.package]

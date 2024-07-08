@@ -6,10 +6,10 @@ use crate::{Orientation, Point2d};
 
 #[derive(Debug)]
 pub struct Block {
-    pub(crate) text: String,
-    pub(crate) top_right: Point2d,
-    pub(crate) bottom_left: Point2d,
-    pub(crate) orientation: Orientation,
+    pub text: String,
+    pub top_right: Point2d,
+    pub bottom_left: Point2d,
+    pub orientation: Orientation,
 }
 
 // converts the height of a character to its width
@@ -122,76 +122,6 @@ impl Block {
         }
 
         true
-    }
-}
-
-// Outputs a String containing SVG elements.
-//
-// Coord system translation.
-// for performance bottom-left is used for the the text x,y without further computation.
-// rectangle and circle points further need computation.
-impl Display for Block {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        // rec width is not text width.
-        let rec_width = self.top_right.x - self.bottom_left.x;
-        // rec_height is not text height.
-        let rec_height = self.bottom_left.y - self.top_right.y;
-
-        // top left
-        let rect_x = self.bottom_left.x;
-        let rect_y = self.bottom_left.y - rec_height;
-
-        writeln!(
-            f,
-            "<rect x=\"{}\" y=\"{}\" width=\"{}\" height=\"{}\"/>",
-            rect_x, rect_y, rec_width, rec_height
-        )?;
-
-        // Want dots ontop of rectangle.
-        writeln!(
-            f,
-            "<circle class=\"bl\" cx=\"{}\" cy=\"{}\" r=\"2\" />",
-            self.bottom_left.x, self.bottom_left.y
-        )?;
-        writeln!(
-            f,
-            "<circle class=\"tr\" cx=\"{}\" cy=\"{}\" r=\"2\" />",
-            self.top_right.x, self.top_right.y
-        )?;
-
-        match self.orientation {
-            Orientation::Horizontal => {
-                writeln!(
-                    f,
-                    "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\" >{}</text>",
-                    self.bottom_left.x, self.bottom_left.y, rec_height, self.text
-                )
-            }
-            Orientation::Vertical90 => {
-                // origin is top left
-                let top_left = Point2d {
-                    x: self.top_right.x - rec_width,
-                    y: self.top_right.y,
-                };
-                writeln!(
-                    f,
-                    "<text transform=\"translate({}, {}) rotate(90)\" fill=\"\" font-size=\"{}\" >{}</text>",
-                    top_left.x, top_left.y, rec_width, self.text
-                )
-            }
-            Orientation::Vertical270 => {
-                // origin is bottom right
-                let bottom_right = Point2d {
-                    x: self.bottom_left.x + rec_width,
-                    y: self.bottom_left.y,
-                };
-                writeln!(
-                    f,
-                    "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\" >{}</text>",
-                    bottom_right.x, bottom_right.y, rec_width, self.text
-                )
-            }
-        }
     }
 }
 

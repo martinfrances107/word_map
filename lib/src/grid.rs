@@ -1,6 +1,6 @@
 use rand::{rngs::ThreadRng, Rng};
 
-use crate::{block::Block, Orientation, Point2d};
+use crate::{block::Block, Point2d};
 
 pub struct Grid {
     rng: ThreadRng,
@@ -32,6 +32,14 @@ impl Grid {
     /// Returns the sub rectangle.
     pub fn bounding_rectangle(&mut self) -> (f32, f32, f32, f32) {
         (self.xmin, self.xmax, self.ymin, self.ymax)
+    }
+
+    /// Reset placement to the full surface.
+    pub fn bounding_rectangle_clear(&mut self) {
+        self.xmin = 0_f32;
+        self.xmax = self.width;
+        self.ymin = 0_f32;
+        self.ymax = self.height;
     }
 
     /// Constrain the sub rectangle.
@@ -69,25 +77,16 @@ impl Grid {
     pub fn place_block(&mut self, text: String, area: f32) -> bool {
         // Give a block 3x100 attempts to get placed.
         // 2 orientations
-        for _ in 0..100 {
+        for _ in 0..2000 {
             let origin = self.point_at_random();
-            let mut candidate =
+            let block =
                 Block::new_randomize_orientation(text.clone(), area, origin, &mut self.rng);
-            // Block must be inside the grid/canvas.
-            if self.is_inside(&candidate.bottom_left) && self.is_inside(&candidate.top_right) {
-                if !self.is_overlapping(&candidate) {
-                    self.blocks.push(candidate);
-                    return true;
-                } else {
-                    candidate.orientation = Orientation::Vertical90;
-                    if !self.is_overlapping(&candidate) {
-                        // self.blocks.push(candidate);
-                        // return true;
-                    } else {
-                        // Other Vertical Oritienttion downwards/upwards
-                    }
-                }
+            // Block must be inside the bounding rectangle.
+            if self.is_inside(&block.bottom_left) && self.is_inside(&block.top_right) && !self.is_overlapping(&block) {
+                self.blocks.push(block);
+                return true;
             }
+
         }
         false
     }
