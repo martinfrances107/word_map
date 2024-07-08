@@ -17,9 +17,9 @@ Can be found in the github repository associated with this crate.
 <table>
 
 <thead>
-<tr>
+
 <th align="left" colspan="2">Description</th>
-</tr>
+
 </thead>
 
 <tbody align="left" style="vertical-align:top;">
