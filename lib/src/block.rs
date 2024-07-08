@@ -6,7 +6,6 @@ use crate::{Orientation, Point2d};
 
 #[derive(Debug)]
 pub struct Block {
-    pub(crate) area: f32,
     pub(crate) text: String,
     pub(crate) top_right: Point2d,
     pub(crate) bottom_left: Point2d,
@@ -79,7 +78,6 @@ impl Block {
         };
 
         Block {
-            area,
             text,
             bottom_left,
             top_right,
@@ -145,18 +143,20 @@ impl Display for Block {
 
         writeln!(
             f,
-            "<circle class=\"bl\" cx=\"{}\" cy=\"{}\" stroke=\"blue\" r=\"2\" />",
+            "<rect x=\"{}\" y=\"{}\" width=\"{}\" height=\"{}\"/>",
+            rect_x, rect_y, rec_width, rec_height
+        )?;
+
+        // Want dots ontop of rectangle.
+        writeln!(
+            f,
+            "<circle class=\"bl\" cx=\"{}\" cy=\"{}\" r=\"2\" />",
             self.bottom_left.x, self.bottom_left.y
         )?;
         writeln!(
             f,
-            "<circle clas=\"tr\" cx=\"{}\" cy=\"{}\" stroke=\"blue\" r=\"2\" />",
+            "<circle class=\"tr\" cx=\"{}\" cy=\"{}\" r=\"2\" />",
             self.top_right.x, self.top_right.y
-        )?;
-        writeln!(
-            f,
-            "<rect x=\"{}\" y=\"{}\" fill=\"none\" stroke=\"red\" width=\"{}\" height=\"{}\"/>",
-            rect_x, rect_y, rec_width, rec_height
         )?;
 
         match self.orientation {
@@ -175,7 +175,7 @@ impl Display for Block {
                 };
                 writeln!(
                     f,
-                    "<text transform=\"translate({}, {}) rotate(90)\" font-size=\"{}\" >{}</text>",
+                    "<text transform=\"translate({}, {}) rotate(90)\" fill=\"\" font-size=\"{}\" >{}</text>",
                     top_left.x, top_left.y, rec_width, self.text
                 )
             }
@@ -255,11 +255,8 @@ mod test {
             ),
         ];
 
-        static BLOCK: Block = Block {
-            area: 100_f32 * 100_f32,
-            // width: 100_f32,
-            // height: 100_f32,
-            text: String("M"),
+        let block: Block = Block {
+            text: String::from('M'),
             top_right: Point2d {
                 x: 200_f32,
                 y: 100_f32,
@@ -273,7 +270,7 @@ mod test {
 
         for (p, expected) in &VALUES {
             println!("go");
-            assert_eq!(BLOCK.is_inside(p), *expected)
+            assert_eq!(block.is_inside(p), *expected)
         }
     }
 }

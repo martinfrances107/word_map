@@ -1,5 +1,7 @@
 # TODO
 
+* Use scale to set color base on area.
+
 * Get a tight fit between text and it block.
 
 * As a library I want to be accept a many fonts as possible.
@@ -11,8 +13,6 @@
   ]
 
 * Support rendering to a HTML CANVAS element as well as SVG.
-
-* Support vertical Upwards/DownWard text.
 
 * Testing needs lots of work.
   existing tests test a function that is no longer used.
