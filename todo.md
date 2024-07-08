@@ -4,6 +4,8 @@
 
 * Get a tight fit between text and it block.
 
+* examples/blueprint produce images which are only valid when view by a browser. Errors appear Inkscape/GIMP.
+
 * As a library I want to be accept a many fonts as possible.
 
   [
