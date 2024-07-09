@@ -1,5 +1,8 @@
 # TODO
 
+* [workspace issue] work out how to integrate tauri app as a examples
+  within a root app.
+
 * Use scale to set color base on area.
 
 * Get a tight fit between text and it block.
