@@ -1,5 +1,3 @@
-use core::fmt::{self, Display};
-
 use rand::rngs::ThreadRng;
 
 use crate::{Orientation, Point2d};
