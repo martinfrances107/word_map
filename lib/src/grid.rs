@@ -79,14 +79,15 @@ impl Grid {
         // 2 orientations
         for _ in 0..2000 {
             let origin = self.point_at_random();
-            let block =
-                Block::new_randomize_orientation(text.clone(), area, origin, &mut self.rng);
+            let block = Block::new_randomize_orientation(text.clone(), area, origin, &mut self.rng);
             // Block must be inside the bounding rectangle.
-            if self.is_inside(&block.bottom_left) && self.is_inside(&block.top_right) && !self.is_overlapping(&block) {
+            if self.is_inside(&block.bottom_left)
+                && self.is_inside(&block.top_right)
+                && !self.is_overlapping(&block)
+            {
                 self.blocks.push(block);
                 return true;
             }
-
         }
         false
     }
