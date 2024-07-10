@@ -1,5 +1,10 @@
-mod app;
+extern crate colorous;
 
+mod app;
+mod app_state;
+mod color_map;
+
+mod components;
 use app::*;
 use leptos::*;
 

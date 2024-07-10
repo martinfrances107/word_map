@@ -39,9 +39,9 @@ Generates a world cloud based on a number of (word, weight) pairs selected at ra
 
   <strong>examples/radial</strong>
 
-  The library allow the definition of bounding rectangle limiting the placement of new text.
+  The library allow the definition of bounding rectangle limiting the placement of new text block.
 
-  For example this allow large text blocks to constrained to a central region while small text blocks can be placed over the full page.
+  For example, this allow large text blocks to constrained to a central region while small text blocks can be placed over the full page.
 </td>
 
 <td>
@@ -52,7 +52,18 @@ Generates a world cloud based on a number of (word, weight) pairs selected at ra
 
 <tr>
 <td>
-  TODO: A website width a word cloud selected supplied by a text file
+
+  examples/generator
+
+  A simple tauri app to generate SVG images
+
+  The (word, weight) pairs input to a textarea.
+
+  A slide allow the overall size of the test blocks to be set.
+
+  Various colour gradients can be selected from a pull down menu.
+
+  A
 </td>
 
 <td>

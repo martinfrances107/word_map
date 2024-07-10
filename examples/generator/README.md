@@ -1,7 +1,13 @@
-# Tauri + Leptos
+# WORD MAP
 
-This template should help get you started developing with Tauri and Leptos.
+This is example makes used of the library
 
-## Recommended IDE Setup
+It uses [tauri](https://tauri.app/) and [leptos](https://leptos.dev/) to build a application around the word map library.
 
-[VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+## Building the app
+
+```bash
+cargo tauri dev
+```
+
+TODO insert images here.
