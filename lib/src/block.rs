@@ -1,8 +1,9 @@
 use rand::rngs::ThreadRng;
+use serde::Serialize;
 
 use crate::{Orientation, Point2d};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct Block {
     pub text: String,
     pub top_right: Point2d,
