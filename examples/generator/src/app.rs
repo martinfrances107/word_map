@@ -38,7 +38,6 @@ pub fn App() -> impl IntoView {
     // List of SVG elements representing the block, expressed as a single string.
     let (blocks, blocks_set) = create_signal::<Vec<Block>>(vec![]);
 
-
     let (data, set_data) = create_signal(vec![0, 1, 2]);
 
     let prepare_text_weights = move |ev| {
@@ -54,10 +53,7 @@ pub fn App() -> impl IntoView {
                 return;
             }
 
-            let args = to_value(&UpdateArgs {
-                tw: &tw
-            })
-            .unwrap();
+            let args = to_value(&UpdateArgs { tw: &tw }).unwrap();
 
             log!("args {:#?}", args);
             // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
@@ -94,21 +90,8 @@ pub fn App() -> impl IntoView {
 
                     {move || {
                         view! {
-                            <For
-                                each=move || data.get()
-                                key=|n| *n
-                                // stores the item in each row in a variable named `data`
-                                let:data
-                            >
-                                <p>{data}</p>
-                            </For>
-                        }
-                    }}
-
-                    {move || {
-                        view! {
                             <For each=move || blocks.get() key=|block| { block.text.clone() } let:b>
-                                {b.view()}
+                                {b.into_view()}
                             </For>
                         }
                     }}

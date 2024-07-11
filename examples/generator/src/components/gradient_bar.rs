@@ -37,7 +37,8 @@ pub fn GradientBar(#[prop(default = "PALLETTE")] title: &'static str) -> impl In
                                     fill=move || {
                                         app_state.color_map_signal.0.get().rgb(f64::from(pos))
                                     }
-                                ></rect>
+                                >
+                                </rect>
                             }
                         })
                         .collect_view()}

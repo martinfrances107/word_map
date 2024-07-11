@@ -30,7 +30,7 @@ fn update(tw: &str) -> String {
     println!("tw {:#?}", tw);
     match Grid::parse_pairs(tw) {
         Ok((_, pairs)) => {
-          println!("pairs {:#?}", pairs);
+            println!("pairs {:#?}", pairs);
             let mut grid = Grid::new(WIDTH, HEIGHT);
             for TextWeight(text, weight) in pairs {
                 grid.place_block(text.to_string(), weight as f32);
@@ -38,15 +38,12 @@ fn update(tw: &str) -> String {
             let b = Blocks(grid.blocks);
             println!("b {b:#?}");
 
-            match serde_json::to_string(&b){
-              Ok(blocks) => blocks,
-              Err(e) => {String::from("error converting blocks")}
+            match serde_json::to_string(&b) {
+                Ok(blocks) => blocks,
+                Err(e) => String::from("error converting blocks"),
             }
-
         }
-        Err(_) => {
-          String::from("failed to pairs tw into TextWeight")
-        }
+        Err(_) => String::from("failed to pairs tw into TextWeight"),
     }
 }
 
