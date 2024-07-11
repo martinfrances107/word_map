@@ -14,10 +14,10 @@ use crate::components::gradient_bar::GradientBar;
 #[component]
 pub fn SideControls() -> impl IntoView {
     view! {
-      <div class="border-solid border-2 rounded-lg h-[600px] p-2">
+        <div class="border-solid border-2 rounded-lg h-[600px] p-2">
 
-        <GradientBar/>
+            <GradientBar/>
 
-      </div>
+        </div>
     }
 }

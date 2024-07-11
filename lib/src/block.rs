@@ -1,15 +1,20 @@
+use crate::{Orientation, Point2d};
+use leptos::view;
+use leptos::IntoView;
 use rand::rngs::ThreadRng;
+use serde::Deserialize;
 use serde::Serialize;
 
-use crate::{Orientation, Point2d};
-
-#[derive(Debug, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub struct Block {
     pub text: String,
     pub top_right: Point2d,
     pub bottom_left: Point2d,
     pub orientation: Orientation,
 }
+
+#[derive(Clone, Debug, Deserialize, Default, Serialize, PartialEq)]
+pub struct Blocks(pub Vec<Block>);
 
 // converts the height of a character to its width
 //
@@ -122,6 +127,69 @@ impl Block {
 
         true
     }
+
+    /// Returns a series of SVG elements
+    ///
+    ///```text
+    /// view!{
+    /// <For each=move || blocks.get() key=|block| { block.text.clone() } let:b>
+    /// {b.view()}
+    /// </For>
+    /// </svg>
+    ///}
+    ///}}
+    /// ```
+    pub fn view(&self) -> impl IntoView {
+        // rec width is not text width.
+        let rec_width = self.top_right.x - self.bottom_left.x;
+        // rec_height is not text height.
+        let rec_height = self.bottom_left.y - self.top_right.y;
+
+        // top left
+        let rect_x = self.bottom_left.x;
+        let rect_y = self.bottom_left.y - rec_height;
+
+        let text: String = match self.orientation {
+            Orientation::Horizontal => {
+                format!(
+                    "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\" >{}</text>",
+                    self.bottom_left.x, self.bottom_left.y, rec_height, self.text
+                )
+            }
+            Orientation::Vertical90 => {
+                // origin is top left
+                let top_left = Point2d {
+                    x: self.top_right.x - rec_width,
+                    y: self.top_right.y,
+                };
+                format!(
+           "<text transform=\"translate({}, {}) rotate(90)\" fill=\"\" font-size=\"{}\" >{}</text>",
+           top_left.x, top_left.y, rec_width, self.text
+       )
+            }
+            Orientation::Vertical270 => {
+                // origin is bottom right
+                let bottom_right = Point2d {
+                    x: self.bottom_left.x + rec_width,
+                    y: self.bottom_left.y,
+                };
+                format!(
+                    "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\" >{}</text>",
+                    bottom_right.x, bottom_right.y, rec_width, self.text
+                )
+            }
+        };
+
+        view! {
+            <rect x=rect_x y=rect_x width=rec_width height=rec_height></rect>
+            ,
+            <circle class="bl" cx=self.bottom_left.x cy=self.bottom_left.y r="2"></circle>
+            <circle class="tr" cx=self.top_right.x cy=self.top_right.y r="2"></circle>
+            ,
+            {text}
+        }
+    }
+
 }
 
 // let a = vec![

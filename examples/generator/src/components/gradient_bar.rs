@@ -18,30 +18,32 @@ pub fn GradientBar(#[prop(default = "PALLETTE")] title: &'static str) -> impl In
     let app_state = use_context::<AppState>().expect("GridentBar: Failed to retrieve state");
 
     view! {
-      <div class="flex flex-col items-center">
-        <p class="text-center flex-none">{title}</p>
-        <div id="scale" class="border-solid radius-sm border-1 w-4 my-1 rounded-lg">
-          <svg
-            style="width: 100%; height:500px;"
-            preserveAspectRatio="none"
-            viewBox="0 0 1 200"
-          >
+        <div class="flex flex-col items-center">
+            <p class="text-center flex-none">{title}</p>
+            <div id="scale" class="border-solid radius-sm border-1 w-4 my-1 rounded-lg">
+                <svg
+                    style="width: 100%; height:500px;"
+                    preserveAspectRatio="none"
+                    viewBox="0 0 1 200"
+                >
 
-            {(0..100)
-                .map(|pos| {
-                    view! {
-                      <rect
-                        y=pos * 2
-                        width="1"
-                        height="3"
-                        fill=move || app_state.color_map_signal.0.get().rgb(f64::from(pos))
-                      ></rect>
-                    }
-                })
-                .collect_view()}
+                    {(0..100)
+                        .map(|pos| {
+                            view! {
+                                <rect
+                                    y=pos * 2
+                                    width="1"
+                                    height="3"
+                                    fill=move || {
+                                        app_state.color_map_signal.0.get().rgb(f64::from(pos))
+                                    }
+                                ></rect>
+                            }
+                        })
+                        .collect_view()}
 
-          </svg>
+                </svg>
+            </div>
         </div>
-      </div>
     }
 }

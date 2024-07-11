@@ -1,18 +1,21 @@
 use rand::{rngs::ThreadRng, Rng};
+use serde::Deserialize;
 use serde::Serialize;
+
+extern crate leptos;
 extern crate nom;
 extern crate serde;
 
 pub mod block;
 pub mod grid;
 
-#[derive(Clone, Debug, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub struct Point2d {
     pub x: f32,
     pub y: f32,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub enum Orientation {
     Horizontal,
     // A rotation of 90 clockwise
