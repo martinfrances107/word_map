@@ -1,13 +1,8 @@
 use leptos::component;
 use leptos::IntoView;
 use serde::{Deserialize, Serialize};
-use serde_wasm_bindgen::to_value;
-use wasm_bindgen::prelude::*;
-use word_map::block::Block;
-use word_map::block::Blocks;
-use word_map::Orientation;
-use word_map::Point2d;
-
+use wasm_bindgen::prelude::wasm_bindgen;
+use wasm_bindgen::JsValue;
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = ["window", "__TAURI__", "tauri"])]
@@ -25,6 +20,9 @@ pub fn App() -> impl IntoView {
     use leptos::leptos_dom::ev::SubmitEvent;
     use leptos::logging::log;
     use leptos::*;
+    use serde_wasm_bindgen::to_value;
+    use word_map::block::Block;
+    use word_map::block::Blocks;
 
     use crate::app_state::AppState;
     use crate::components::scale_bar::ScaleBar;
@@ -65,6 +63,34 @@ pub fn App() -> impl IntoView {
         });
     };
 
+    let cdata_css = r#"
+      svg{
+      --prussianBlue: #003153;
+      --white: #f3ffff;
+      --red: hsl(0, 100%, 50%);
+      font-family: Courier;
+      background-color: var(--prussianBlue);
+      }
+      /* bottom left of text block */
+      .bl {
+        fill: var(--red);
+        stroke: None;
+      }
+      /* top right corner of text block */
+      .tr {
+        fill: var(--red);
+        stroke: None;
+      }
+      rect {
+        stroke: var(--white);
+        fill: none
+      }
+      text {
+        fill: var(--white);
+        font-weight: bold;
+      }
+    "#;
+
     view! {
         <main class="flex flex-col gap-4 p-2">
             <div class="flex">
@@ -79,6 +105,10 @@ pub fn App() -> impl IntoView {
                     height="600px"
                     xmlns="http://www.w3.org/2000/svg"
                 >
+                    <defs>
+                        <style>{cdata_css}</style>
+                    </defs>
+
                     <circle
                         cx="50"
                         cy="50"

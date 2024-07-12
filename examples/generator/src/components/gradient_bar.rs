@@ -7,12 +7,8 @@ use crate::app_state::AppState;
 /// ColorScale
 #[component]
 pub fn GradientBar(#[prop(default = "PALLETTE")] title: &'static str) -> impl IntoView {
-    use colorous::Gradient;
     use leptos::use_context;
     use leptos::CollectView;
-    use leptos::IntoAttribute;
-
-    use leptos::ReadSignal;
     use leptos::SignalGet;
 
     let app_state = use_context::<AppState>().expect("GridentBar: Failed to retrieve state");

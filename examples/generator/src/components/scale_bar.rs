@@ -5,16 +5,12 @@ use leptos::IntoView;
 /// Zoom and ColorScale
 #[component]
 pub fn ScaleBar() -> impl IntoView {
-    use colorous::Gradient;
     use leptos::event_target_value;
     use leptos::use_context;
-    use leptos::ReadSignal;
     use leptos::SignalGet;
     use leptos::SignalSet;
-    use leptos::WriteSignal;
 
     use crate::app_state::AppState;
-    use crate::components::gradient_bar::GradientBar;
 
     let app_state = use_context::<AppState>().expect("ScaleBar: Failed to retrieve state");
 
