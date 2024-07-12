@@ -4,19 +4,19 @@
 extern crate log;
 extern crate word_map;
 
-use word_map::block::Block;
-use word_map::block::Blocks;
-use word_map::grid::Grid;
-use word_map::grid::TextWeight;
-use word_map::Orientation;
-use word_map::Point2d;
-
-static WIDTH: f32 = 800_f32;
-static HEIGHT: f32 = 800_f32;
-
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn update(tw: &str) -> String {
+    use word_map::block::Block;
+    use word_map::block::Blocks;
+    use word_map::grid::Grid;
+    use word_map::grid::TextWeight;
+    use word_map::Orientation;
+    use word_map::Point2d;
+
+    static WIDTH: f32 = 800_f32;
+    static HEIGHT: f32 = 800_f32;
+
     // generate_word_map
 
     // TODO:

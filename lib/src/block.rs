@@ -1,4 +1,5 @@
-use crate::{Orientation, Point2d};
+use crate::Orientation;
+use crate::Point2d;
 use leptos::view;
 use leptos::IntoView;
 use leptos::View;
@@ -145,7 +146,7 @@ impl IntoView for Block{
     ///}
     ///}}
     /// ```
-    fn into_view(self) -> leptos::View {
+    fn into_view(self) -> View {
       // rec width is not text width.
       let rec_width = self.top_right.x - self.bottom_left.x;
       // rec_height is not text height.
@@ -159,7 +160,9 @@ impl IntoView for Block{
           Orientation::Horizontal => {
               let t = format!("translate({},{}) rotate(0)", self.bottom_left.x, self.bottom_left.y);
               view! {
-                  <text transform={t} font-size={rec_height} >{self.text}</text>
+                  <text transform=t font-size=rec_height>
+                      {self.text}
+                  </text>
               }
           }
           Orientation::Vertical90 => {
@@ -169,7 +172,11 @@ impl IntoView for Block{
                   y: self.top_right.y,
               };
               let t = format!("translate({},{}) rotate(90)",top_left.x, top_left.y);
-              view!{<text transform={t}  font_size={rec_width} >{self.text}</text>}
+              view! {
+                  <text transform=t font_size=rec_width>
+                      {self.text}
+                  </text>
+              }
           }
           Orientation::Vertical270 => {
               // origin is bottom right
@@ -178,8 +185,10 @@ impl IntoView for Block{
                   y: self.bottom_left.y,
               };
               let t = format!("translate({},{}) rotate(270)", bottom_right.x, bottom_right.y);
-              view!{
-                <text transform={t} font-size={rec_width} >{self.text}</text>
+              view! {
+                  <text transform=t font-size=rec_width>
+                      {self.text}
+                  </text>
               }
           }
       };
