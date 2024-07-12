@@ -17,10 +17,10 @@ fn render_block(b: &Block) {
     let rect_x = b.bottom_left.x;
     let rect_y = b.bottom_left.y - rec_height;
 
-    println!(
-        "{}\" y=\"{}\" width=\"{}\" height=\"{}\"/>",
-        rect_x, rect_y, rec_width, rec_height
-    );
+    // println!(
+    //     "<rect x=\"{}\" y=\"{}\" width=\"{}\" height=\"{}\"/>",
+    //     rect_x, rect_y, rec_width, rec_height
+    // );
 
     // Want dots ontop of rectangle.
     println!(
@@ -91,10 +91,8 @@ fn main() {
               --prussianBlue: #003153;
               --white: #f3ffff;
               --red: hsl(0, 100%, 50%);
-              }}
-
-              svg{{
-                background-color: var(--prussianBlue);
+              font-family: Courier;
+              background-color: var(--prussianBlue);
               }}
               /* bottom left of text block */
               .bl {{
@@ -118,7 +116,6 @@ fn main() {
             ]]></style>
           </defs>"
     );
-    println!("<g font-family=\"Courier\">");
     // Assign a random number to a word selected at random
     for _ in 0..900 {
         // input range 1..10 ( no zero width )
@@ -133,7 +130,6 @@ fn main() {
     for b in grid.blocks {
         render_block(&b);
     }
-    println!("</g>");
     println!("</svg>");
 
     // let word = random_word::gen(Lang::En);
