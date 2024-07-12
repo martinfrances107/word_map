@@ -13,13 +13,9 @@ fn render_block(b: &Block) {
     // rec_height is not text height.
     let rec_height = b.bottom_left.y - b.top_right.y;
 
-    // top left
-    let rect_x = b.bottom_left.x;
-    let rect_y = b.bottom_left.y - rec_height;
-
     // println!(
     //     "<rect x=\"{}\" y=\"{}\" width=\"{}\" height=\"{}\"/>",
-    //     rect_x, rect_y, rec_width, rec_height
+    //     b.bottom_left.x, b.bottom_left.y - rec_height, rec_width, rec_height
     // );
 
     // Want dots ontop of rectangle.
