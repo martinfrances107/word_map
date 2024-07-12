@@ -23,7 +23,6 @@ pub fn App() -> impl IntoView {
     use serde_wasm_bindgen::to_value;
     use word_map::block::Block;
     use word_map::block::Blocks;
-
     use crate::app_state::AppState;
     use crate::components::scale_bar::ScaleBar;
     use crate::components::side_controls::SideControls;
@@ -64,28 +63,33 @@ pub fn App() -> impl IntoView {
     };
 
     let cdata_css = r#"
-      svg{
+      #word_map {
       --prussianBlue: #003153;
       --white: #f3ffff;
       --red: hsl(0, 100%, 50%);
-      font-family: Courier;
+
       background-color: var(--prussianBlue);
+      font-family: Courier;
       }
+
       /* bottom left of text block */
       .bl {
         fill: var(--red);
         stroke: None;
       }
+
       /* top right corner of text block */
       .tr {
         fill: var(--red);
         stroke: None;
       }
-      rect {
+
+      #word_map rect {
         stroke: var(--white);
         fill: none
       }
-      text {
+
+      #word_map text {
         fill: var(--white);
         font-weight: bold;
       }
@@ -100,6 +104,7 @@ pub fn App() -> impl IntoView {
 
             <div class="flex p-2">
                 <svg
+                    id="word_map"
                     class="border border-2 border-solid mr-2 rounded-lg"
                     width="800px"
                     height="600px"
@@ -108,15 +113,6 @@ pub fn App() -> impl IntoView {
                     <defs>
                         <style>{cdata_css}</style>
                     </defs>
-
-                    <circle
-                        cx="50"
-                        cy="50"
-                        r="40"
-                        stroke="green"
-                        stroke-width="4"
-                        fill="yellow"
-                    ></circle>
 
                     {move || {
                         view! {
