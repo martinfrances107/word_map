@@ -35,8 +35,6 @@ pub fn App() -> impl IntoView {
     // List of SVG elements representing the block, expressed as a single string.
     let (blocks, blocks_set) = create_signal::<Vec<Block>>(vec![]);
 
-    let (data, set_data) = create_signal(vec![0, 1, 2]);
-
     let prepare_text_weights = move |ev| {
         let v = event_target_value(&ev);
         text_weights_set.set(v);
