@@ -38,23 +38,22 @@ pub fn ScaleBar() -> impl IntoView {
                 on:change=move |ev| {
                     ev.prevent_default();
                     spawn_local(async move {
-                    if let Ok(scale) = event_target_value(&ev).parse::<u16>() {
-                        app_state.scale_signal.1.set(scale);
-                        let tw = app_state.text_weights_signal.0.get_untracked();
-                        // log!("args {:#?}", args);
-                        // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-                        let args = to_value(&UpdateArgs {
-                          scale: scale as f32,
-                          tw: &tw,
-                        })
-                        .unwrap();
-                        let blocks_string: String = invoke("update", args).await.as_string().unwrap();
-                        // // log!("update_word_list() rx string blocks {:#?}", blocks_string);
-                        // let received_blocks: Blocks = serde_json::from_str(&blocks_string).unwrap();
-                        // // log!("update_word_list() rx blocks {:#?}", received_blocks);
-                        // blocks_set.set(received_blocks.0);
-                    }
-                  });
+                        if let Ok(scale) = event_target_value(&ev).parse::<u16>() {
+                            app_state.scale_signal.1.set(scale);
+                            let tw = app_state.text_weights_signal.0.get_untracked();
+                            let args = to_value(
+                                    &UpdateArgs {
+                                        scale: scale as f32,
+                                        tw: &tw,
+                                    },
+                                )
+                                .unwrap();
+                            let blocks_string: String = invoke("update", args)
+                                .await
+                                .as_string()
+                                .unwrap();
+                        }
+                    });
                 }
 
                 class="h-full"

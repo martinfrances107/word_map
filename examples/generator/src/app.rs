@@ -38,7 +38,9 @@ fn render_block(b: &Block) -> impl IntoView {
             );
 
             view! {
-              <text transform={transform} font-size=rec_height >{b.text.clone()}</text>
+                <text transform=transform font-size=rec_height>
+                    {b.text.clone()}
+                </text>
             }
         }
         Orientation::Vertical90 => {
@@ -49,7 +51,9 @@ fn render_block(b: &Block) -> impl IntoView {
             };
             let transform = format!("translate({}, {}) rotate(90)", top_left.x, top_left.y);
             view! {
-              <text transform=transform font-size=rec_width >{b.text.clone()}</text>
+                <text transform=transform font-size=rec_width>
+                    {b.text.clone()}
+                </text>
             }
         }
         Orientation::Vertical270 => {
@@ -63,7 +67,9 @@ fn render_block(b: &Block) -> impl IntoView {
                 bottom_right.x, bottom_right.y
             );
             view! {
-              <text transform=transform font-size=rec_width >{b.text.clone()}</text>
+                <text transform=transform font-size=rec_width>
+                    {b.text.clone()}
+                </text>
             }
         }
     };
@@ -210,20 +216,24 @@ pub fn App() -> impl IntoView {
                         on:input=prepare_text_weights
                         prop:value=app_state.text_weights_signal.0
                     />
-                    <button class="w-fit" type="submit">"Update"</button>
-                    <button class="w-fit" type="submit" on:click=move |_| {
-                      // log!("button entry");
-                      // Triggered before update_work_list
-                      // insert random data into the text box.
-                      let mut text_weights = String::default();
-                      for _ in 0..100 {
-                        let area = rng.gen_range(10u32..100u32);
-                        let text = random_word::gen(Lang::En).to_uppercase();
-                        text_weights.push_str(&format!("{text},{area} "));
-                      }
-                      // log!("rand: {text_weights}");
-                      app_state.text_weights_signal.1.set(text_weights);
-                    }>"Random"</button>
+                    <button class="w-fit" type="submit">
+                        "Update"
+                    </button>
+                    <button
+                        class="w-fit"
+                        type="submit"
+                        on:click=move |_| {
+                            let mut text_weights = String::default();
+                            for _ in 0..100 {
+                                let area = rng.gen_range(10u32..100u32);
+                                let text = random_word::gen(Lang::En).to_uppercase();
+                                text_weights.push_str(&format!("{text},{area} "));
+                            }
+                            app_state.text_weights_signal.1.set(text_weights);
+                        }
+                    >
+                        "Random"
+                    </button>
 
                 </form>
 
