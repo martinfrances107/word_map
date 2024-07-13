@@ -75,7 +75,7 @@ impl Grid {
     /// WARNING:
     /// O(n^2) operation
     pub fn place_block(&mut self, text: String, area: f32) -> bool {
-        // Give a block 3x100 attempts to get placed.
+        // Give a block 2000 attempts to get placed.
         // 2 orientations
         for _ in 0..2000 {
             let origin = self.point_at_random();
@@ -83,7 +83,7 @@ impl Grid {
             // Block must be inside the bounding rectangle.
             if self.is_inside(&block.bottom_left)
                 && self.is_inside(&block.top_right)
-                && !self.is_overlapping(&block)
+                && !self.is_any_block_overlapping(&block)
             {
                 self.blocks.push(block);
                 return true;
@@ -114,7 +114,7 @@ impl Grid {
     }
 
     // Check candidate block over all existing blocks.
-    fn is_overlapping(&self, test_block: &Block) -> bool {
+    fn is_any_block_overlapping(&self, test_block: &Block) -> bool {
         for block in &self.blocks {
             // is candidate bottom-left inside block.
             if block.is_overlapping(test_block) {
