@@ -16,6 +16,7 @@ extern "C" {
 
 #[derive(Serialize, Deserialize)]
 struct UpdateArgs<'a> {
+    scale: f32,
     // (text,weight) expressed as a string
     tw: &'a str,
 }
@@ -117,7 +118,11 @@ pub fn App() -> impl IntoView {
                 return;
             }
 
-            let args = to_value(&UpdateArgs { tw: &tw }).unwrap();
+            let args = to_value(&UpdateArgs {
+                scale: app_state.scale_signal.0.get_untracked() as f32,
+                tw: &tw,
+            })
+            .unwrap();
 
             // log!("args {:#?}", args);
             // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
@@ -213,8 +218,8 @@ pub fn App() -> impl IntoView {
                       // Triggered before update_work_list
                       // insert random data into the text box.
                       let mut text_weights = String::default();
-                      for _ in 0..200 {
-                        let area = 24u32 * 24u32 * rng.gen_range(1u32..10u32);
+                      for _ in 0..100 {
+                        let area = rng.gen_range(10u32..100u32);
                         let text = random_word::gen(Lang::En).to_uppercase();
                         text_weights.push_str(&format!("{text},{area} "));
                       }
