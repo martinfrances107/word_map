@@ -60,10 +60,11 @@ pub fn App() -> impl IntoView {
         });
     };
 
-    let cdata_css = r#"
+    // string literal here facilitates escaping of \{ and \}
+    static CSS: &str= r#"
       #word_map {
       --prussianBlue: #003153;
-      --white: #f3ffff;
+      --white: hsl(232, 0%, 95%);
       --red: hsl(0, 100%, 50%);
 
       background-color: var(--prussianBlue);
@@ -97,7 +98,6 @@ pub fn App() -> impl IntoView {
         <main class="flex flex-col gap-4 p-2">
             <div class="flex">
                 <h1 class="text-5xl">WORD MAP</h1>
-
             </div>
 
             <div class="flex p-2">
@@ -109,7 +109,7 @@ pub fn App() -> impl IntoView {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <defs>
-                        <style>{cdata_css}</style>
+                        <style>{CSS}</style>
                     </defs>
 
                     {move || {

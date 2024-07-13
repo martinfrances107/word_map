@@ -85,7 +85,7 @@ fn main() {
             <style><![CDATA[
               svg{{
               --prussianBlue: #003153;
-              --white: #f3ffff;
+              --white: hsl(232, 0%, 95%);
               --red: hsl(0, 100%, 50%);
               font-family: Courier;
               background-color: var(--prussianBlue);
@@ -126,7 +126,7 @@ fn main() {
     for b in grid.blocks {
         render_block(&b);
     }
-    println!("</svg>");
+    println!(r"</svg>");
 
     // let word = random_word::gen(Lang::En);
 }
