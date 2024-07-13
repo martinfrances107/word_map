@@ -1,4 +1,6 @@
 extern crate colorous;
+extern crate rand;
+extern crate random_word;
 extern crate word_map;
 
 mod app;

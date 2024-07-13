@@ -1,8 +1,13 @@
 use leptos::component;
+use leptos::view;
 use leptos::IntoView;
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::wasm_bindgen;
 use wasm_bindgen::JsValue;
+use word_map::block::Block;
+use word_map::Orientation;
+use word_map::Point2d;
+
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = ["window", "__TAURI__", "tauri"])]
@@ -15,17 +20,81 @@ struct UpdateArgs<'a> {
     tw: &'a str,
 }
 
+fn render_block(b: &Block) -> impl IntoView {
+    // rec width is not text width.
+    let rec_width = b.top_right.x - b.bottom_left.x;
+    // rec_height is not text height.
+    let rec_height = b.bottom_left.y - b.top_right.y;
+
+    let rect_x = b.bottom_left.x;
+    let rect_y = b.bottom_left.y - rec_height;
+
+    let text = match b.orientation {
+        Orientation::Horizontal => {
+            let transform = format!(
+                "translate({}, {}) rotate(0)",
+                b.bottom_left.x, b.bottom_left.y
+            );
+
+            view! {
+              <text transform={transform} font-size=rec_height >{b.text.clone()}</text>
+            }
+        }
+        Orientation::Vertical90 => {
+            // origin is top left
+            let top_left = Point2d {
+                x: b.top_right.x - rec_width,
+                y: b.top_right.y,
+            };
+            let transform = format!("translate({}, {}) rotate(90)", top_left.x, top_left.y);
+            view! {
+              <text transform=transform font-size=rec_width >{b.text.clone()}</text>
+            }
+        }
+        Orientation::Vertical270 => {
+            // origin is bottom right
+            let bottom_right = Point2d {
+                x: b.bottom_left.x + rec_width,
+                y: b.bottom_left.y,
+            };
+            let transform = format!(
+                "translate({}, {}) rotate(270)",
+                bottom_right.x, bottom_right.y
+            );
+            view! {
+              <text transform=transform font-size=rec_width >{b.text.clone()}</text>
+            }
+        }
+    };
+
+    let rect_x = b.bottom_left.x;
+    let rect_y = b.bottom_left.y - rec_height;
+    let bl_cy = b.bottom_left.y - rec_height;
+    view! {
+        <rect x=rect_x y=rect_y width=rec_width height=rec_height></rect>
+        <circle class="bl" cx=b.bottom_left.x cy=b.bottom_left.y r="2"></circle>
+        <circle class="tr" cx=b.top_right.x cy=b.top_right.y r="2"></circle>
+        {text}
+    }
+}
+
 #[component]
 pub fn App() -> impl IntoView {
     use leptos::leptos_dom::ev::SubmitEvent;
     use leptos::logging::log;
     use leptos::*;
+    use rand::Rng;
+    use random_word::Lang;
+
     use serde_wasm_bindgen::to_value;
     use word_map::block::Block;
     use word_map::block::Blocks;
+
     use crate::app_state::AppState;
     use crate::components::scale_bar::ScaleBar;
     use crate::components::side_controls::SideControls;
+
+    let mut rng = rand::thread_rng();
 
     let app_state = AppState::default();
     provide_context(app_state.clone());
@@ -50,18 +119,18 @@ pub fn App() -> impl IntoView {
 
             let args = to_value(&UpdateArgs { tw: &tw }).unwrap();
 
-            log!("args {:#?}", args);
+            // log!("args {:#?}", args);
             // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
             let blocks_string: String = invoke("update", args).await.as_string().unwrap();
-            log!("update_word_list() rx string blocks {:#?}", blocks_string);
+            // log!("update_word_list() rx string blocks {:#?}", blocks_string);
             let received_blocks: Blocks = serde_json::from_str(&blocks_string).unwrap();
-            log!("update_word_list() rx blocks {:#?}", received_blocks);
+            // log!("update_word_list() rx blocks {:#?}", received_blocks);
             blocks_set.set(received_blocks.0);
         });
     };
 
     // string literal here facilitates escaping of \{ and \}
-    static CSS: &str= r#"
+    static CSS: &str = r#"
       #word_map {
       --prussianBlue: #003153;
       --white: hsl(232, 0%, 95%);
@@ -115,7 +184,7 @@ pub fn App() -> impl IntoView {
                     {move || {
                         view! {
                             <For each=move || blocks.get() key=|block| { block.text.clone() } let:b>
-                                {b.into_view()}
+                                {render_block(&b)}
                             </For>
                         }
                     }}
@@ -136,10 +205,23 @@ pub fn App() -> impl IntoView {
                         id="word-weight-input"
                         placeholder="apple,1 socks,10 house,5"
                         on:input=prepare_text_weights
+                        prop:value=text_weights
                     />
-                    <button class="w-fit" type="submit">
-                        "Update"
-                    </button>
+                    <button class="w-fit" type="submit">"Update"</button>
+                    <button class="w-fit" type="submit" on:click=move |_| {
+                      // log!("button entry");
+                      // Triggered before update_work_list
+                      // insert random data into the text box.
+                      let mut text_weights = String::default();
+                      for _ in 0..200 {
+                        let area = 24u32 * 24u32 * rng.gen_range(1u32..10u32);
+                        let text = random_word::gen(Lang::En).to_uppercase();
+                        text_weights.push_str(&format!("{text},{area} "));
+                      }
+                      // log!("rand: {text_weights}");
+                      text_weights_set.set(text_weights);
+                    }>"Random"</button>
+
                 </form>
 
             </div>
