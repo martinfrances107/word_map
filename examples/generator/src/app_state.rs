@@ -9,6 +9,8 @@ use crate::color_map::ColorMap;
 pub(crate) struct AppState {
     pub(crate) scale_signal: (ReadSignal<u16>, WriteSignal<u16>),
     pub(crate) color_map_signal: (ReadSignal<ColorMap>, WriteSignal<ColorMap>),
+    // List of (test,weight) pairs each separated by spaces.
+    pub(crate) text_weights_signal: (ReadSignal<String>, WriteSignal<String>),
 }
 
 impl Default for AppState {
@@ -16,6 +18,7 @@ impl Default for AppState {
         Self {
             scale_signal: create_signal(10_u16),
             color_map_signal: create_signal(ColorMap::new([5f64, 55f64], colorous::PLASMA)),
+            text_weights_signal: create_signal(String::default()),
         }
     }
 }

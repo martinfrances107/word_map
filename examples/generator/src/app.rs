@@ -15,10 +15,10 @@ extern "C" {
 }
 
 #[derive(Serialize, Deserialize)]
-struct UpdateArgs<'a> {
-    scale: f32,
+pub(crate) struct UpdateArgs<'a> {
+    pub(crate) scale: f32,
     // (text,weight) expressed as a string
-    tw: &'a str,
+    pub(crate) tw: &'a str,
 }
 
 fn render_block(b: &Block) -> impl IntoView {
@@ -100,20 +100,18 @@ pub fn App() -> impl IntoView {
     let app_state = AppState::default();
     provide_context(app_state.clone());
 
-    // List of (test,weight) pairs each separated by spaces.
-    let (text_weights, text_weights_set) = create_signal(String::new());
     // List of SVG elements representing the block, expressed as a single string.
     let (blocks, blocks_set) = create_signal::<Vec<Block>>(vec![]);
 
     let prepare_text_weights = move |ev| {
         let v = event_target_value(&ev);
-        text_weights_set.set(v);
+        app_state.text_weights_signal.1.set(v);
     };
 
     let update_word_list = move |ev: SubmitEvent| {
         ev.prevent_default();
         spawn_local(async move {
-            let tw: String = text_weights.get_untracked();
+            let tw: String = app_state.text_weights_signal.0.get_untracked();
             if tw.is_empty() {
                 return;
             }
@@ -210,7 +208,7 @@ pub fn App() -> impl IntoView {
                         id="word-weight-input"
                         placeholder="apple,1 socks,10 house,5"
                         on:input=prepare_text_weights
-                        prop:value=text_weights
+                        prop:value=app_state.text_weights_signal.0
                     />
                     <button class="w-fit" type="submit">"Update"</button>
                     <button class="w-fit" type="submit" on:click=move |_| {
@@ -224,7 +222,7 @@ pub fn App() -> impl IntoView {
                         text_weights.push_str(&format!("{text},{area} "));
                       }
                       // log!("rand: {text_weights}");
-                      text_weights_set.set(text_weights);
+                      app_state.text_weights_signal.1.set(text_weights);
                     }>"Random"</button>
 
                 </form>
