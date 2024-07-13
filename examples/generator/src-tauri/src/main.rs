@@ -12,7 +12,7 @@ fn update(tw: &str) -> String {
     use word_map::grid::TextWeight;
 
     static WIDTH: f32 = 800_f32;
-    static HEIGHT: f32 = 800_f32;
+    static HEIGHT: f32 = 600_f32;
 
     // generate_word_map
 
