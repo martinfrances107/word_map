@@ -21,7 +21,7 @@ pub(crate) struct UpdateArgs<'a> {
     pub(crate) tw: &'a str,
 }
 
-fn render_block(b: &Block, text_fill: String) -> impl IntoView {
+fn render_block(b: &Block, text_fill: &String) -> impl IntoView {
     // rec width is not text width.
     let rec_width = b.top_right.x - b.bottom_left.x;
     // rec_height is not text height.
@@ -199,7 +199,7 @@ pub fn App() -> impl IntoView {
                             >
 
                                 {
-                                    let ((_, ref block), color) = data;
+                                    let ((_, ref block), ref color) = data;
                                     render_block(block, color)
                                 }
 
