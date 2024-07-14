@@ -1,5 +1,4 @@
 use leptos::component;
-use leptos::logging::log;
 use leptos::view;
 use leptos::IntoView;
 use serde::{Deserialize, Serialize};
@@ -193,7 +192,11 @@ pub fn App() -> impl IntoView {
                         view! {
                             // ibc - index/block/color
 
-                            <For each=move || ibc.clone() key=|((i, _block), _color)| { *i } let:data>
+                            <For
+                                each=move || ibc.clone()
+                                key=|((i, _block), _color)| { *i }
+                                let:data
+                            >
 
                                 {
                                     let ((_, ref block), color) = data;

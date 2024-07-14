@@ -24,17 +24,13 @@ fn update(scale: f32, tw: &str) -> String {
     //
     // I want the grid here  to be in a lazy static but I need to first find a
     // diffent RNG generate.
-    println!("scale {scale}");
-    println!("tw {:#?}", tw);
     match Grid::parse_pairs(tw) {
         Ok((_, pairs)) => {
-            println!("pairs {:#?}", pairs);
             let mut grid = Grid::new(WIDTH, HEIGHT);
             for TextWeight(text, weight) in pairs {
                 grid.place_block(text.to_string(), scale * weight as f32);
             }
             let b = Blocks(grid.blocks);
-            println!("b {b:#?}");
 
             match serde_json::to_string(&b) {
                 Ok(blocks) => blocks,
