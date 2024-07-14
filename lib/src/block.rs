@@ -129,12 +129,9 @@ impl Block {
 
         true
     }
-
-
-
 }
 
-impl IntoView for Block{
+impl IntoView for Block {
     /// Returns a series of SVG elements
     ///
     ///```text
@@ -147,59 +144,66 @@ impl IntoView for Block{
     ///}}
     /// ```
     fn into_view(self) -> View {
-      // rec width is not text width.
-      let rec_width = self.top_right.x - self.bottom_left.x;
-      // rec_height is not text height.
-      let rec_height = self.bottom_left.y - self.top_right.y;
+        // rec width is not text width.
+        let rec_width = self.top_right.x - self.bottom_left.x;
+        // rec_height is not text height.
+        let rec_height = self.bottom_left.y - self.top_right.y;
 
-      // top left
-      let rect_x = self.bottom_left.x;
-      let rect_y = self.bottom_left.y - rec_height;
+        // top left
+        let rect_x = self.bottom_left.x;
+        let rect_y = self.bottom_left.y - rec_height;
 
-      let text = match self.orientation {
-          Orientation::Horizontal => {
-              let t = format!("translate({},{}) rotate(0)", self.bottom_left.x, self.bottom_left.y);
-              view! {
-                  <text transform=t font-size=rec_height>
-                      {self.text}
-                  </text>
-              }
-          }
-          Orientation::Vertical90 => {
-              // origin is top left
-              let top_left = Point2d {
-                  x: self.top_right.x - rec_width,
-                  y: self.top_right.y,
-              };
-              let t = format!("translate({},{}) rotate(90)",top_left.x, top_left.y);
-              view! {
-                  <text transform=t font_size=rec_width>
-                      {self.text}
-                  </text>
-              }
-          }
-          Orientation::Vertical270 => {
-              // origin is bottom right
-              let bottom_right = Point2d {
-                  x: self.bottom_left.x + rec_width,
-                  y: self.bottom_left.y,
-              };
-              let t = format!("translate({},{}) rotate(270)", bottom_right.x, bottom_right.y);
-              view! {
-                  <text transform=t font-size=rec_width>
-                      {self.text}
-                  </text>
-              }
-          }
-      };
+        let text = match self.orientation {
+            Orientation::Horizontal => {
+                let t = format!(
+                    "translate({},{}) rotate(0)",
+                    self.bottom_left.x, self.bottom_left.y
+                );
+                view! {
+                    <text transform=t font-size=rec_height>
+                        {self.text}
+                    </text>
+                }
+            }
+            Orientation::Vertical90 => {
+                // origin is top left
+                let top_left = Point2d {
+                    x: self.top_right.x - rec_width,
+                    y: self.top_right.y,
+                };
+                let t = format!("translate({},{}) rotate(90)", top_left.x, top_left.y);
+                view! {
+                    <text transform=t font_size=rec_width>
+                        {self.text}
+                    </text>
+                }
+            }
+            Orientation::Vertical270 => {
+                // origin is bottom right
+                let bottom_right = Point2d {
+                    x: self.bottom_left.x + rec_width,
+                    y: self.bottom_left.y,
+                };
+                let t = format!(
+                    "translate({},{}) rotate(270)",
+                    bottom_right.x, bottom_right.y
+                );
+                view! {
+                    <text transform=t font-size=rec_width>
+                        {self.text}
+                    </text>
+                }
+            }
+        };
 
-      view! {
-          <rect x=rect_x y=rect_x width=rec_width height=rec_height></rect>
-          <circle class="bl" cx=self.bottom_left.x cy=self.bottom_left.y r="2"></circle>
-          <circle class="tr" cx=self.top_right.x cy=self.top_right.y r="2"></circle>
-          {text}
-      }.into()
-  }
+        view! {
+            <rect x=rect_x y=rect_x width=rec_width height=rec_height></rect>
+            <circle class="bl" cx=self.bottom_left.x cy=self.bottom_left.y r="2"></circle>
+            <circle class="tr" cx=self.top_right.x cy=self.top_right.y r="2"></circle>
+            {text}
+        }
+        .into()
+    }
 }
 // let a = vec![
 //   (String::from("TAXI"), 24. * 24. * 6.),
