@@ -1,4 +1,5 @@
 use leptos::component;
+use leptos::logging::log;
 use leptos::view;
 use leptos::IntoView;
 use serde::{Deserialize, Serialize};
@@ -21,7 +22,7 @@ pub(crate) struct UpdateArgs<'a> {
     pub(crate) tw: &'a str,
 }
 
-fn render_block(b: &Block) -> impl IntoView {
+fn render_block(b: &Block, text_fill: String) -> impl IntoView {
     // rec width is not text width.
     let rec_width = b.top_right.x - b.bottom_left.x;
     // rec_height is not text height.
@@ -38,7 +39,7 @@ fn render_block(b: &Block) -> impl IntoView {
             );
 
             view! {
-                <text transform=transform font-size=rec_height>
+                <text transform=transform fill=text_fill font-size=rec_height>
                     {b.text.clone()}
                 </text>
             }
@@ -51,7 +52,7 @@ fn render_block(b: &Block) -> impl IntoView {
             };
             let transform = format!("translate({}, {}) rotate(90)", top_left.x, top_left.y);
             view! {
-                <text transform=transform font-size=rec_width>
+                <text transform=transform fill=text_fill font-size=rec_width>
                     {b.text.clone()}
                 </text>
             }
@@ -67,7 +68,7 @@ fn render_block(b: &Block) -> impl IntoView {
                 bottom_right.x, bottom_right.y
             );
             view! {
-                <text transform=transform font-size=rec_width>
+                <text transform=transform fill=text_fill font-size=rec_width>
                     {b.text.clone()}
                 </text>
             }
@@ -128,12 +129,9 @@ pub fn App() -> impl IntoView {
             })
             .unwrap();
 
-            // log!("args {:#?}", args);
             // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
             let blocks_string: String = invoke("update", args).await.as_string().unwrap();
-            // log!("update_word_list() rx string blocks {:#?}", blocks_string);
             let received_blocks: Blocks = serde_json::from_str(&blocks_string).unwrap();
-            // log!("update_word_list() rx blocks {:#?}", received_blocks);
             blocks_set.set(received_blocks.0);
         });
     };
@@ -167,7 +165,6 @@ pub fn App() -> impl IntoView {
       }
 
       #word_map text {
-        fill: var(--white);
         font-weight: bold;
       }
     "#;
@@ -191,9 +188,18 @@ pub fn App() -> impl IntoView {
                     </defs>
 
                     {move || {
+                        let color = app_state.color_signal.0.get();
+                        let ibc = blocks.get().into_iter().enumerate().zip(color);
                         view! {
-                            <For each=move || blocks.get() key=|block| { block.text.clone() } let:b>
-                                {render_block(&b)}
+                            // ibc - index/block/color
+
+                            <For each=move || ibc.clone() key=|((i, _block), _color)| { *i } let:data>
+
+                                {
+                                    let ((_, ref block), color) = data;
+                                    render_block(block, color)
+                                }
+
                             </For>
                         }
                     }}
@@ -224,14 +230,19 @@ pub fn App() -> impl IntoView {
                         type="submit"
                         on:click=move |_| {
                             let mut text_weights = String::default();
-                            for _ in 0..100 {
+                            let mut colors = Vec::with_capacity(100);
+                            let color_map = app_state.color_map_signal.0.get();
+                            for i in 0..100 {
                                 let area = rng.gen_range(10u32..100u32);
                                 let text = random_word::gen(Lang::En).to_uppercase();
+                                colors.push(color_map.rgb(area as f64));
                                 text_weights.push_str(&format!("{text},{area} "));
                             }
                             app_state.text_weights_signal.1.set(text_weights);
+                            app_state.color_signal.1.set(colors);
                         }
                     >
+
                         "Random"
                     </button>
 
