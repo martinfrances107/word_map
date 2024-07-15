@@ -27,9 +27,6 @@ fn render_block(b: &Block, text_fill: &String) -> impl IntoView {
     // rec_height is not text height.
     let rec_height = b.bottom_left.y - b.top_right.y;
 
-    let rect_x = b.bottom_left.x;
-    let rect_y = b.bottom_left.y - rec_height;
-
     let text = match b.orientation {
         Orientation::Horizontal => {
             let transform = format!(
@@ -74,21 +71,20 @@ fn render_block(b: &Block, text_fill: &String) -> impl IntoView {
         }
     };
 
-    let rect_x = b.bottom_left.x;
-    let rect_y = b.bottom_left.y - rec_height;
-    let bl_cy = b.bottom_left.y - rec_height;
+    // let rect_x = b.bottom_left.x;
+    // let rect_y = b.bottom_left.y - rec_height;
     view! {
-        <rect x=rect_x y=rect_y width=rec_width height=rec_height></rect>
-        <circle class="bl" cx=b.bottom_left.x cy=b.bottom_left.y r="2"></circle>
-        <circle class="tr" cx=b.top_right.x cy=b.top_right.y r="2"></circle>
+        // <rect x=rect_x y=rect_y width=rec_width height=rec_height></rect>
+        // <circle class="bl" cx=b.bottom_left.x cy=b.bottom_left.y r="2"></circle>
+        // <circle class="tr" cx=b.top_right.x cy=b.top_right.y r="2"></circle>
         {text}
     }
+
 }
 
 #[component]
 pub fn App() -> impl IntoView {
     use leptos::leptos_dom::ev::SubmitEvent;
-    use leptos::logging::log;
     use leptos::*;
     use rand::Rng;
     use random_word::Lang;
@@ -190,7 +186,7 @@ pub fn App() -> impl IntoView {
                         let color = app_state.color_signal.0.get();
                         let ibc = blocks.get().into_iter().enumerate().zip(color);
                         view! {
-                            // ibc - index/block/color
+                            // ibc - Index/Block/Color
 
                             <For
                                 each=move || ibc.clone()
@@ -235,7 +231,7 @@ pub fn App() -> impl IntoView {
                             let mut text_weights = String::default();
                             let mut colors = Vec::with_capacity(100);
                             let color_map = app_state.color_map_signal.0.get();
-                            for i in 0..100 {
+                            for _ in 0..100 {
                                 let area = rng.gen_range(10u32..100u32);
                                 let text = random_word::gen(Lang::En).to_uppercase();
                                 colors.push(color_map.rgb(area as f64));

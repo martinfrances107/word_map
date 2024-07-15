@@ -197,7 +197,7 @@ impl IntoView for Block {
         };
 
         view! {
-            <rect x=rect_x y=rect_x width=rec_width height=rec_height></rect>
+            <rect x=rect_x y=rect_y width=rec_width height=rec_height></rect>
             <circle class="bl" cx=self.bottom_left.x cy=self.bottom_left.y r="2"></circle>
             <circle class="tr" cx=self.top_right.x cy=self.top_right.y r="2"></circle>
             {text}

@@ -18,6 +18,7 @@ pub fn ScaleBar() -> impl IntoView {
     use leptos::SignalGet;
     use leptos::SignalGetUntracked;
     use leptos::SignalSet;
+    use leptos::logging::log;
     use serde_wasm_bindgen::to_value;
     use wasm_bindgen_futures::spawn_local;
     use word_map::block::Blocks;
@@ -48,10 +49,12 @@ pub fn ScaleBar() -> impl IntoView {
                                     },
                                 )
                                 .unwrap();
-                            let blocks_string: String = invoke("update", args)
+                            let blocks_string = invoke("update", args)
                                 .await
                                 .as_string()
                                 .unwrap();
+                            let received_blocks: Blocks = serde_json::from_str(&blocks_string).unwrap();
+                            app_state.blocks.1.set(Blocks(received_blocks.0));
                         }
                     });
                 }
@@ -59,8 +62,8 @@ pub fn ScaleBar() -> impl IntoView {
                 class="h-full"
                 type="range"
                 step="1"
-                value="5"
-                min="10"
+                value="175"
+                min="50"
                 max="300"
             />
         </form>
