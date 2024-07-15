@@ -1,7 +1,5 @@
 # TODO
 
-* Fix and commit existing issues.
-
 * Performannce - record time taken for invoke call.
   Read and tauri performance guidelines.
 
@@ -17,8 +15,6 @@
 * Updating the scale does not update the text
   How to update a signal inside a thread_local.
 
-* Add images to the README.md
-
 * Add select box for font store list of font-familiy and aspect ratio.
 
   [
@@ -29,7 +25,6 @@
 
 * [workspace issue] work out how to integrate tauri app as a examples
   within a root app.
-
 
 * Library Testing needs lots of work.
   existing tests test a function that is no longer used.

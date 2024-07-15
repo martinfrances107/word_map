@@ -53,21 +53,16 @@ Generates a world cloud based on a number of (word, weight) pairs selected at ra
 <tr>
 <td>
 
-  examples/generator
+  <strong>examples/generator</strong>
 
   A simple tauri app to generate SVG images
 
-  The (word, weight) pairs input to a textarea.
+  The user inputs (word, weight) pairs for display. A slide allow the overall size of the test blocks to be set. Various colour gradients can be selected from a pull down menu.
 
-  A slide allow the overall size of the test blocks to be set.
-
-  Various colour gradients can be selected from a pull down menu.
-
-  A
 </td>
 
 <td>
-  IMG3
+    <img src="https://raw.githubusercontent.com/martinfrances107/word_map/main/images/generator.png" alt="Tauri App: Text's area is used to color the block" title="Tauri App: Text's area is used to color the block"/>
 </td>
 
 </tr>
