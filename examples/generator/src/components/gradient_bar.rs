@@ -21,6 +21,8 @@ pub fn GradientBar(#[prop(default = "PALLETTE")] title: &'static str) -> impl In
                     style="width: 100%; height:500px;"
                     preserveAspectRatio="none"
                     viewBox="0 0 1 200"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg\"
                 >
 
                     {(0..100)
