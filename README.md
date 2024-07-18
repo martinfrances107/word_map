@@ -59,6 +59,7 @@ Generates a world cloud based on a number of (word, weight) pairs selected at ra
 
   The user inputs (word, weight) pairs for display. A slide allow the overall size of the test blocks to be set. Various colour gradients can be selected from a pull down menu.
 
+  It is in an early stage of development.
 </td>
 
 <td>
