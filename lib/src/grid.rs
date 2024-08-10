@@ -142,13 +142,13 @@ mod test {
     fn parse_text_weight() {
         assert_eq!(
             Grid::parse_text_weight("apple,2"),
-            Ok(("", TextWeight(&"apple", 2)))
+            Ok(("", TextWeight("apple", 2)))
         );
     }
 
     #[test]
     fn parse_list() {
-        let expected = vec![TextWeight(&"apple", 2), TextWeight(&"bubble", 10)];
+        let expected = vec![TextWeight("apple", 2), TextWeight("bubble", 10)];
         assert_eq!(Grid::parse_pairs("apple,2 bubble,10"), Ok(("", expected)));
     }
 }

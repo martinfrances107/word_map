@@ -1,0 +1,550 @@
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg version="1.1"
+      width="800"
+      height="600"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+<defs>
+            <style><![CDATA[
+              svg{
+              --prussianBlue: #003153;
+              --white: hsl(232, 0%, 95%);
+              --red: hsl(0, 100%, 50%);
+              font-family: Courier;
+              background-color: var(--prussianBlue);
+              }
+              /* bottom left of text block */
+              .bl {
+                fill: var(--red);
+                stroke: None;
+              }
+              /* top right corner of text block */
+              .tr {
+                fill: var(--red);
+                stroke: None;
+
+              }
+              rect {
+                stroke: var(--white);
+                fill: none
+              }
+              text {
+                fill: var(--white);
+                font-weight: bold;
+              }
+            ]]></style>
+          </defs>
+<circle class="bl" cx="512.46844" cy="474.74463" r="2" />
+<circle class="tr" cx="676.8313" cy="444.42883" r="2" />
+<text transform="translate(512.46844, 474.74463) rotate(0)" font-size="30.315796" >OVERBLOWS</text>
+<circle class="bl" cx="771.6894" cy="189.44084" r="2" />
+<circle class="tr" cx="790.1288" cy="89.46814" r="2" />
+<text transform="translate(790.1288, 189.44084) rotate(270)" font-size="18.439392" >MONOCHORD</text>
+<circle class="bl" cx="366.42047" cy="327.33237" r="2" />
+<circle class="tr" cx="390.2679" cy="241.13675" r="2" />
+<text transform="translate(366.42047, 241.13675) rotate(90)" fill="" font-size="23.847443" >DOLMAN</text>
+<circle class="bl" cx="159.91469" cy="405.93573" r="2" />
+<circle class="tr" cx="285.03116" cy="364.39706" r="2" />
+<text transform="translate(159.91469, 405.93573) rotate(0)" font-size="41.538666" >TRANK</text>
+<circle class="bl" cx="273.9702" cy="508.3821" r="2" />
+<circle class="tr" cx="395.53964" cy="490.0362" r="2" />
+<text transform="translate(273.9702, 508.3821) rotate(0)" font-size="18.345917" >INTERBREEDS</text>
+<circle class="bl" cx="110.15234" cy="47.577522" r="2" />
+<circle class="tr" cx="172.7929" cy="36.02382" r="2" />
+<text transform="translate(110.15234, 47.577522) rotate(0)" font-size="11.553703" >LEVITATOR</text>
+<circle class="bl" cx="528.95355" cy="133.43633" r="2" />
+<circle class="tr" cx="741.6155" cy="108.2207" r="2" />
+<text transform="translate(528.95355, 133.43633) rotate(0)" font-size="25.215622" >DIVISIVENESSES</text>
+<circle class="bl" cx="202.06146" cy="256.90836" r="2" />
+<circle class="tr" cx="354.23056" cy="228.84161" r="2" />
+<text transform="translate(202.06146, 256.90836) rotate(0)" font-size="28.066742" >SLIPSHEET</text>
+<circle class="bl" cx="711.52386" cy="397.68784" r="2" />
+<circle class="tr" cx="727.6796" cy="339.2934" r="2" />
+<text transform="translate(727.6796, 397.68784) rotate(270)" font-size="16.155762" >LATTEN</text>
+<circle class="bl" cx="389.0791" cy="412.72952" r="2" />
+<circle class="tr" cx="572.36475" cy="382.3041" r="2" />
+<text transform="translate(389.0791, 412.72952) rotate(0)" font-size="30.425415" >MICROFUNGI</text>
+<circle class="bl" cx="51.548767" cy="359.67035" r="2" />
+<circle class="tr" cx="66.588486" cy="296.24985" r="2" />
+<text transform="translate(51.548767, 296.24985) rotate(90)" fill="" font-size="15.039719" >RETALLY</text>
+<circle class="bl" cx="501.2895" cy="536.3499" r="2" />
+<circle class="tr" cx="519.26746" cy="493.02954" r="2" />
+<text transform="translate(519.26746, 536.3499) rotate(270)" font-size="17.977966" >BURL</text>
+<circle class="bl" cx="504.6774" cy="265.3036" r="2" />
+<circle class="tr" cx="602.40283" cy="224.74754" r="2" />
+<text transform="translate(504.6774, 265.3036) rotate(0)" font-size="40.556046" >BORK</text>
+<circle class="bl" cx="303.72763" cy="93.64078" r="2" />
+<circle class="tr" cx="431.85696" cy="70.00803" r="2" />
+<text transform="translate(303.72763, 93.64078) rotate(0)" font-size="23.632744" >MISESTEEM</text>
+<circle class="bl" cx="69.80943" cy="122.20436" r="2" />
+<circle class="tr" cx="91.091385" cy="58.10208" r="2" />
+<text transform="translate(69.80943, 58.10208) rotate(90)" fill="" font-size="21.281952" >FREAK</text>
+<circle class="bl" cx="467.26038" cy="490.46793" r="2" />
+<circle class="tr" cx="481.94656" cy="428.53818" r="2" />
+<text transform="translate(467.26038, 428.53818) rotate(90)" fill="" font-size="14.686188" >TOYLIKE</text>
+<circle class="bl" cx="616.3999" cy="279.2643" r="2" />
+<circle class="tr" cx="640.01636" cy="151.22336" r="2" />
+<text transform="translate(640.01636, 279.2643) rotate(270)" font-size="23.616455" >CUSTOMIZE</text>
+<circle class="bl" cx="35.47468" cy="247.4245" r="2" />
+<circle class="tr" cx="65.941086" cy="82.245186" r="2" />
+<text transform="translate(35.47468, 82.245186) rotate(90)" fill="" font-size="30.466404" >FIREWORKS</text>
+<circle class="bl" cx="469.25027" cy="155.68185" r="2" />
+<circle class="tr" cx="493.42422" cy="10.05571" r="2" />
+<text transform="translate(493.42422, 155.68185) rotate(270)" font-size="24.17395" >TABLECLOTH</text>
+<circle class="bl" cx="112.94679" cy="538.79626" r="2" />
+<circle class="tr" cx="229.9047" cy="522.61707" r="2" />
+<text transform="translate(112.94679, 538.79626) rotate(0)" font-size="16.1792" >OVIPOSITIONS</text>
+<circle class="bl" cx="92.13829" cy="230.26515" r="2" />
+<circle class="tr" cx="118.785164" cy="101.84648" r="2" />
+<text transform="translate(92.13829, 101.84648) rotate(90)" fill="" font-size="26.646873" >STENOSIS</text>
+<circle class="bl" cx="282.00903" cy="210.50925" r="2" />
+<circle class="tr" cx="298.8959" cy="98.60831" r="2" />
+<text transform="translate(282.00903, 98.60831) rotate(90)" fill="" font-size="16.886871" >REEXPLAINED</text>
+<circle class="bl" cx="711.17084" cy="325.03152" r="2" />
+<circle class="tr" cx="734.4187" cy="198.98882" r="2" />
+<text transform="translate(734.4187, 325.03152) rotate(270)" font-size="23.247864" >ALLERGINS</text>
+<circle class="bl" cx="99.15581" cy="341.11734" r="2" />
+<circle class="tr" cx="213.03117" cy="309.61182" r="2" />
+<text transform="translate(99.15581, 341.11734) rotate(0)" font-size="31.505524" >BIFORM</text>
+<circle class="bl" cx="169.08035" cy="597.9226" r="2" />
+<circle class="tr" cx="331.52042" cy="573.40894" r="2" />
+<text transform="translate(169.08035, 597.9226) rotate(0)" font-size="24.513672" >UPTIGHTNESS</text>
+<circle class="bl" cx="751.4135" cy="330.9178" r="2" />
+<circle class="tr" cx="765.17615" cy="239.7196" r="2" />
+<text transform="translate(751.4135, 239.7196) rotate(90)" fill="" font-size="13.762634" >GALLBLADDER</text>
+<circle class="bl" cx="581.09015" cy="430.16547" r="2" />
+<circle class="tr" cx="798.99725" cy="404.3279" r="2" />
+<text transform="translate(581.09015, 430.16547) rotate(0)" font-size="25.837555" >SOLUBILIZATION</text>
+<circle class="bl" cx="468.7228" cy="574.7707" r="2" />
+<circle class="tr" cx="584.1379" cy="547.4008" r="2" />
+<text transform="translate(468.7228, 574.7707) rotate(0)" font-size="27.369873" >PLEASED</text>
+<circle class="bl" cx="680.988" cy="227.14018" r="2" />
+<circle class="tr" cx="705.72644" cy="137.72409" r="2" />
+<text transform="translate(705.72644, 227.14018) rotate(270)" font-size="24.738464" >ORACLE</text>
+<circle class="bl" cx="280.7322" cy="479.55988" r="2" />
+<circle class="tr" cx="293.937" cy="415.9223" r="2" />
+<text transform="translate(293.937, 479.55988) rotate(270)" font-size="13.204803" >MISDIALS</text>
+<circle class="bl" cx="52.15779" cy="583.8134" r="2" />
+<circle class="tr" cx="74.477295" cy="476.24957" r="2" />
+<text transform="translate(74.477295, 583.8134) rotate(270)" font-size="22.319504" >SWEETSOP</text>
+<circle class="bl" cx="34.63669" cy="294.33948" r="2" />
+<circle class="tr" cx="219.05986" cy="263.72522" r="2" />
+<text transform="translate(34.63669, 294.33948) rotate(0)" font-size="30.614258" >ACCUSATIVE</text>
+<circle class="bl" cx="4.1169167" cy="36.38184" r="2" />
+<circle class="tr" cx="71.76048" cy="23.905361" r="2" />
+<text transform="translate(4.1169167, 36.38184) rotate(0)" font-size="12.476479" >XENOGRAFT</text>
+<circle class="bl" cx="436.00693" cy="307.30377" r="2" />
+<circle class="tr" cx="590.8451" cy="287.53214" r="2" />
+<text transform="translate(436.00693, 307.30377) rotate(0)" font-size="19.771637" >PSEPHOLOGISTS</text>
+<circle class="bl" cx="224.52669" cy="206.17014" r="2" />
+<circle class="tr" cx="261.3485" cy="50.897385" r="2" />
+<text transform="translate(224.52669, 50.897385) rotate(90)" fill="" font-size="36.821823" >SCULPED</text>
+<circle class="bl" cx="432.15134" cy="188.4181" r="2" />
+<circle class="tr" cx="450.729" cy="54.121643" r="2" />
+<text transform="translate(450.729, 188.4181) rotate(270)" font-size="18.577667" >CONTRACTIBLE</text>
+<circle class="bl" cx="333.84045" cy="466.1834" r="2" />
+<circle class="tr" cx="363.26605" cy="288.92075" r="2" />
+<text transform="translate(333.84045, 288.92075) rotate(90)" fill="" font-size="29.425598" >MISFEASORS</text>
+<circle class="bl" cx="555.69476" cy="37.739967" r="2" />
+<circle class="tr" cx="712.75507" cy="16.013296" r="2" />
+<text transform="translate(555.69476, 37.739967) rotate(0)" font-size="21.726671" >MISCONCEIVER</text>
+<circle class="bl" cx="414.212" cy="582.63965" r="2" />
+<circle class="tr" cx="435.08112" cy="469.49384" r="2" />
+<text transform="translate(435.08112, 582.63965) rotate(270)" font-size="20.86911" >ULTRACOOL</text>
+<circle class="bl" cx="2.6547623" cy="580.61646" r="2" />
+<circle class="tr" cx="36.51352" cy="437.83856" r="2" />
+<text transform="translate(36.51352, 580.61646) rotate(270)" font-size="33.858757" >GOBANGS</text>
+<circle class="bl" cx="6.1271667" cy="410.48813" r="2" />
+<circle class="tr" cx="139.80173" cy="373.50485" r="2" />
+<text transform="translate(6.1271667, 410.48813) rotate(0)" font-size="36.983276" >GLEGLY</text>
+<circle class="bl" cx="542.984" cy="103.99697" r="2" />
+<circle class="tr" cx="683.5932" cy="82.77777" r="2" />
+<text transform="translate(542.984, 103.99697) rotate(0)" font-size="21.2192" >BOUTONNIERE</text>
+<circle class="bl" cx="254.60634" cy="279.51752" r="2" />
+<circle class="tr" cx="356.9006" cy="258.29144" r="2" />
+<text transform="translate(254.60634, 279.51752) rotate(0)" font-size="21.226074" >BANKINGS</text>
+<circle class="bl" cx="638.7751" cy="598.0126" r="2" />
+<circle class="tr" cx="653.91003" cy="479.486" r="2" />
+<text transform="translate(638.7751, 479.486) rotate(90)" fill="" font-size="15.134949" >UNCOMPLICATED</text>
+<circle class="bl" cx="283.03937" cy="51.341843" r="2" />
+<circle class="tr" cx="403.33008" cy="18.061413" r="2" />
+<text transform="translate(283.03937, 51.341843) rotate(0)" font-size="33.28043" >NAIVES</text>
+<circle class="bl" cx="127.88934" cy="31.52554" r="2" />
+<circle class="tr" cx="247.92532" cy="6.6180744" r="2" />
+<text transform="translate(127.88934, 31.52554) rotate(0)" font-size="24.907465" >UNFETTER</text>
+<circle class="bl" cx="647.6731" cy="290.584" r="2" />
+<circle class="tr" cx="680.45514" cy="152.3464" r="2" />
+<text transform="translate(680.45514, 290.584) rotate(270)" font-size="32.782043" >SENORES</text>
+<circle class="bl" cx="124.36161" cy="216.08344" r="2" />
+<circle class="tr" cx="147.4918" cy="90.678764" r="2" />
+<text transform="translate(124.36161, 90.678764) rotate(90)" fill="" font-size="23.130196" >PHYLLITES</text>
+<circle class="bl" cx="160.92552" cy="253.50237" r="2" />
+<circle class="tr" cx="182.75967" cy="108.81821" r="2" />
+<text transform="translate(182.75967, 253.50237) rotate(270)" font-size="21.834152" >BROOMSTICKS</text>
+<circle class="bl" cx="549.9361" cy="370.78757" r="2" />
+<circle class="tr" cx="671.7777" cy="341.89368" r="2" />
+<text transform="translate(549.9361, 370.78757) rotate(0)" font-size="28.89389" >SNAFFLE</text>
+<circle class="bl" cx="329.62064" cy="224.47379" r="2" />
+<circle class="tr" cx="486.0952" cy="192.00531" r="2" />
+<text transform="translate(329.62064, 224.47379) rotate(0)" font-size="32.468475" >SIGHTSAW</text>
+<circle class="bl" cx="221.0554" cy="515.98285" r="2" />
+<circle class="tr" cx="232.32974" cy="427.68982" r="2" />
+<text transform="translate(232.32974, 515.98285) rotate(270)" font-size="11.274338" >REPRODUCIBLES</text>
+<circle class="bl" cx="497.17514" cy="208.80847" r="2" />
+<circle class="tr" cx="517.9656" cy="71.04048" r="2" />
+<text transform="translate(517.9656, 208.80847) rotate(270)" font-size="20.790436" >RECURRENTLY</text>
+<circle class="bl" cx="553.7301" cy="70.8199" r="2" />
+<circle class="tr" cx="717.3638" cy="40.638588" r="2" />
+<text transform="translate(553.7301, 70.8199) rotate(0)" font-size="30.181313" >DEMERGERS</text>
+<circle class="bl" cx="137.60443" cy="566.5091" r="2" />
+<circle class="tr" cx="275.7414" cy="543.57837" r="2" />
+<text transform="translate(137.60443, 566.5091) rotate(0)" font-size="22.930725" >SOMERSETED</text>
+<circle class="bl" cx="3.4795933" cy="284.57416" r="2" />
+<circle class="tr" cx="30.946445" cy="119.111206" r="2" />
+<text transform="translate(30.946445, 284.57416) rotate(270)" font-size="27.466852" >EXODONTIAS</text>
+<circle class="bl" cx="727.25476" cy="96.41311" r="2" />
+<circle class="tr" cx="738.7736" cy="40.900677" r="2" />
+<text transform="translate(738.7736, 96.41311) rotate(270)" font-size="11.51886" >KLUDGING</text>
+<circle class="bl" cx="327.27307" cy="140.36043" r="2" />
+<circle class="tr" cx="419.75742" cy="101.97943" r="2" />
+<text transform="translate(327.27307, 140.36043) rotate(0)" font-size="38.380997" >MIBS</text>
+<circle class="bl" cx="734.5663" cy="559.50726" r="2" />
+<circle class="tr" cx="753.60864" cy="444.79443" r="2" />
+<text transform="translate(734.5663, 444.79443) rotate(90)" fill="" font-size="19.042358" >REINCITING</text>
+<circle class="bl" cx="252.17581" cy="530.7033" r="2" />
+<circle class="tr" cx="406.6305" cy="512.3894" r="2" />
+<text transform="translate(252.17581, 530.7033) rotate(0)" font-size="18.313904" >ASSASSINATIONS</text>
+<circle class="bl" cx="757.86096" cy="590.9916" r="2" />
+<circle class="tr" cx="795.66296" cy="454.35785" r="2" />
+<text transform="translate(795.66296, 590.9916) rotate(270)" font-size="37.802002" >TOSSES</text>
+<circle class="bl" cx="94.41128" cy="362.06638" r="2" />
+<circle class="tr" cx="226.35739" cy="343.81384" r="2" />
+<text transform="translate(94.41128, 362.06638) rotate(0)" font-size="18.252533" >EXTROVERSION</text>
+<circle class="bl" cx="682.3389" cy="581.1893" r="2" />
+<circle class="tr" cx="712.9879" cy="433.48325" r="2" />
+<text transform="translate(712.9879, 581.1893) rotate(270)" font-size="30.648987" >JIMMYING</text>
+<circle class="bl" cx="52.269936" cy="450.07068" r="2" />
+<circle class="tr" cx="220.00424" cy="419.13303" r="2" />
+<text transform="translate(52.269936, 450.07068) rotate(0)" font-size="30.937653" >BUHRSTONE</text>
+<circle class="bl" cx="577.849" cy="201.30865" r="2" />
+<circle class="tr" cx="613.2312" cy="137.36487" r="2" />
+<text transform="translate(613.2312, 201.30865) rotate(270)" font-size="35.382202" >RED</text>
+<circle class="bl" cx="399.92276" cy="371.19348" r="2" />
+<circle class="tr" cx="421.09506" cy="269.15823" r="2" />
+<text transform="translate(399.92276, 269.15823) rotate(90)" fill="" font-size="21.172302" >ORDAINER</text>
+<circle class="bl" cx="552.63855" cy="336.35217" r="2" />
+<circle class="tr" cx="710.6769" cy="310.1178" r="2" />
+<text transform="translate(552.63855, 336.35217) rotate(0)" font-size="26.234375" >SATCHELFUL</text>
+<circle class="bl" cx="196.46677" cy="186.44406" r="2" />
+<circle class="tr" cx="220.82425" cy="54.385468" r="2" />
+<text transform="translate(220.82425, 186.44406) rotate(270)" font-size="24.357483" >DESCRIBES</text>
+<circle class="bl" cx="218.24323" cy="227.92596" r="2" />
+<circle class="tr" cx="266.8751" cy="214.47115" r="2" />
+<text transform="translate(218.24323, 227.92596) rotate(0)" font-size="13.454819" >LOADER</text>
+<circle class="bl" cx="87.8458" cy="519.35114" r="2" />
+<circle class="tr" cx="212.203" cy="484.94565" r="2" />
+<text transform="translate(87.8458, 519.35114) rotate(0)" font-size="34.405487" >NEUTER</text>
+<circle class="bl" cx="316.48465" cy="487.37024" r="2" />
+<circle class="tr" cx="379.27072" cy="477.89526" r="2" />
+<text transform="translate(316.48465, 487.37024) rotate(0)" font-size="9.474976" >SINGULARIZE</text>
+<circle class="bl" cx="432.0342" cy="380.5853" r="2" />
+<circle class="tr" cx="528.8513" cy="362.72794" r="2" />
+<text transform="translate(432.0342, 380.5853) rotate(0)" font-size="17.85736" >INFLECTOR</text>
+<circle class="bl" cx="768.0666" cy="399.1285" r="2" />
+<circle class="tr" cx="797.1778" cy="276.37042" r="2" />
+<text transform="translate(797.1778, 399.1285) rotate(270)" font-size="29.111206" >SAGGERS</text>
+<circle class="bl" cx="311.2419" cy="454.48737" r="2" />
+<circle class="tr" cx="331.4033" cy="296.5971" r="2" />
+<text transform="translate(311.2419, 296.5971) rotate(90)" fill="" font-size="20.161377" >SIPHONOSTELES</text>
+<circle class="bl" cx="313.62753" cy="69.933556" r="2" />
+<circle class="tr" cx="382.92157" cy="57.152657" r="2" />
+<text transform="translate(313.62753, 69.933556) rotate(0)" font-size="12.780899" >CORROSIVE</text>
+<circle class="bl" cx="462.36896" cy="591.5687" r="2" />
+<circle class="tr" cx="549.45703" cy="575.5058" r="2" />
+<text transform="translate(462.36896, 591.5687) rotate(0)" font-size="16.062927" >IMBARKING</text>
+<circle class="bl" cx="744.21985" cy="163.82477" r="2" />
+<circle class="tr" cx="768.1388" cy="48.55263" r="2" />
+<text transform="translate(744.21985, 48.55263) rotate(90)" fill="" font-size="23.918945" >CALAMARS</text>
+<circle class="bl" cx="304.04483" cy="179.54636" r="2" />
+<circle class="tr" cx="427.15558" cy="154.00089" r="2" />
+<text transform="translate(304.04483, 179.54636) rotate(0)" font-size="25.545471" >RESEATED</text>
+<circle class="bl" cx="423.15045" cy="353.54398" r="2" />
+<circle class="tr" cx="540.46265" cy="329.2017" r="2" />
+<text transform="translate(423.15045, 353.54398) rotate(0)" font-size="24.342285" >AROINTED</text>
+<circle class="bl" cx="287.83237" cy="568.0079" r="2" />
+<circle class="tr" cx="411.50082" cy="533.7929" r="2" />
+<text transform="translate(287.83237, 568.0079) rotate(0)" font-size="34.214966" >PUNKER</text>
+<circle class="bl" cx="521.62286" cy="540.2858" r="2" />
+<circle class="tr" cx="604.2917" cy="505.97827" r="2" />
+<text transform="translate(521.62286, 540.2858) rotate(0)" font-size="34.307556" >MELL</text>
+<circle class="bl" cx="291.89053" cy="390.51297" r="2" />
+<circle class="tr" cx="307.77377" cy="333.10367" r="2" />
+<text transform="translate(291.89053, 333.10367) rotate(90)" fill="" font-size="15.88324" >SADHES</text>
+<circle class="bl" cx="658.09906" cy="15.920305" r="2" />
+<circle class="tr" cx="722.541" cy="0.6383562" r="2" />
+<text transform="translate(658.09906, 15.920305) rotate(0)" font-size="15.281949" >MOBCAPS</text>
+<circle class="bl" cx="213.22403" cy="327.8811" r="2" />
+<circle class="tr" cx="293.14157" cy="305.77057" r="2" />
+<text transform="translate(213.22403, 327.8811) rotate(0)" font-size="22.110535" >TOILER</text>
+<circle class="bl" cx="592.72833" cy="296.86145" r="2" />
+<circle class="tr" cx="642.489" cy="285.06107" r="2" />
+<text transform="translate(592.72833, 296.86145) rotate(0)" font-size="11.8003845" >SAYABLE</text>
+<circle class="bl" cx="705.7383" cy="182.07486" r="2" />
+<circle class="tr" cx="764.39307" cy="169.90399" r="2" />
+<text transform="translate(705.7383, 182.07486) rotate(0)" font-size="12.170868" >BRUTISMS</text>
+<circle class="bl" cx="6.1327934" cy="111.51242" r="2" />
+<circle class="tr" cx="24.161238" cy="57.209873" r="2" />
+<text transform="translate(6.1327934, 57.209873) rotate(90)" fill="" font-size="18.028444" >BONES</text>
+<circle class="bl" cx="435.49548" cy="571.6494" r="2" />
+<circle class="tr" cx="457.37787" cy="466.1921" r="2" />
+<text transform="translate(435.49548, 466.1921) rotate(90)" fill="" font-size="21.882385" >DEFECATE</text>
+<circle class="bl" cx="365.42358" cy="436.1114" r="2" />
+<circle class="tr" cx="460.99695" cy="418.48343" r="2" />
+<text transform="translate(365.42358, 436.1114) rotate(0)" font-size="17.62796" >REMISSIVE</text>
+<circle class="bl" cx="40.660095" cy="47.298073" r="2" />
+<circle class="tr" cx="108.707405" cy="37.029114" r="2" />
+<text transform="translate(40.660095, 47.298073) rotate(0)" font-size="10.268959" >IMPRESSIONS</text>
+<circle class="bl" cx="265.53964" cy="91.884514" r="2" />
+<circle class="tr" cx="280.88342" cy="8.695364" r="2" />
+<text transform="translate(265.53964, 8.695364) rotate(90)" fill="" font-size="15.3437805" >POUNDCAKE</text>
+<circle class="bl" cx="236.07378" cy="498.07678" r="2" />
+<circle class="tr" cx="262.6508" cy="418.0255" r="2" />
+<text transform="translate(262.6508, 498.07678) rotate(270)" font-size="26.577011" >BEAMS</text>
+<circle class="bl" cx="641.1353" cy="394.55045" r="2" />
+<circle class="tr" cx="698.4736" cy="383.97473" r="2" />
+<text transform="translate(641.1353, 394.55045) rotate(0)" font-size="10.575714" >CHOLEROID</text>
+<circle class="bl" cx="391.34912" cy="242.62268" r="2" />
+<circle class="tr" cx="482.00745" cy="227.5734" r="2" />
+<text transform="translate(391.34912, 242.62268) rotate(0)" font-size="15.049286" >REPACKAGER</text>
+<circle class="bl" cx="483.22403" cy="542.5225" r="2" />
+<circle class="tr" cx="498.45886" cy="459.924" r="2" />
+<text transform="translate(498.45886, 542.5225) rotate(270)" font-size="15.234833" >BERASCALS</text>
+<circle class="bl" cx="90.922455" cy="483.66193" r="2" />
+<circle class="tr" cx="177.84398" cy="454.804" r="2" />
+<text transform="translate(90.922455, 483.66193) rotate(0)" font-size="28.85794" >TOONS</text>
+<circle class="bl" cx="713.98956" cy="595.1047" r="2" />
+<circle class="tr" cx="731.3139" cy="448.99573" r="2" />
+<text transform="translate(731.3139, 595.1047) rotate(270)" font-size="17.32434" >DISCONSOLATELY</text>
+<circle class="bl" cx="452.299" cy="107.786575" r="2" />
+<circle class="tr" cx="468.85867" cy="37.95669" r="2" />
+<text transform="translate(452.299, 37.95669) rotate(90)" fill="" font-size="16.559662" >UNCLOSE</text>
+<circle class="bl" cx="26.302528" cy="21.066856" r="2" />
+<circle class="tr" cx="124.966934" cy="8.468171" r="2" />
+<text transform="translate(26.302528, 21.066856) rotate(0)" font-size="12.598685" >PHILODENDRONS</text>
+<circle class="bl" cx="735.62177" cy="334.72797" r="2" />
+<circle class="tr" cx="746.98956" cy="279.9433" r="2" />
+<text transform="translate(735.62177, 279.9433) rotate(90)" fill="" font-size="11.367798" >COSHERED</text>
+<circle class="bl" cx="606.896" cy="566.5025" r="2" />
+<circle class="tr" cx="620.6014" cy="483.93997" r="2" />
+<text transform="translate(606.896, 483.93997) rotate(90)" fill="" font-size="13.705383" >MULTISTATE</text>
+<circle class="bl" cx="37.4156" cy="495.77258" r="2" />
+<circle class="tr" cx="48.745453" cy="434.34564" r="2" />
+<text transform="translate(37.4156, 434.34564) rotate(90)" fill="" font-size="11.329853" >LOWERCASE</text>
+<circle class="bl" cx="69.61986" cy="241.77296" r="2" />
+<circle class="tr" cx="87.2036" cy="125.25417" r="2" />
+<text transform="translate(87.2036, 241.77296) rotate(270)" font-size="17.58374" >APPERTAINED</text>
+<circle class="bl" cx="336.9358" cy="13.143396" r="2" />
+<circle class="tr" cx="446.83508" cy="0.11248016" r="2" />
+<text transform="translate(336.9358, 13.143396) rotate(0)" font-size="13.030916" >SUPPORTABILITY</text>
+<circle class="bl" cx="461.96643" cy="323.33215" r="2" />
+<circle class="tr" cx="531.68616" cy="312.81082" r="2" />
+<text transform="translate(461.96643, 323.33215) rotate(0)" font-size="10.521332" >REDISPLAYED</text>
+<circle class="bl" cx="656.9882" cy="596.75415" r="2" />
+<circle class="tr" cx="682.22314" cy="505.5435" r="2" />
+<text transform="translate(682.22314, 596.75415) rotate(270)" font-size="25.234924" >INERTS</text>
+<circle class="bl" cx="778.3766" cy="87.39775" r="2" />
+<circle class="tr" cx="788.3415" cy="3.3564806" r="2" />
+<text transform="translate(778.3766, 3.3564806) rotate(90)" fill="" font-size="9.964905" >PROPRIETORSHIP</text>
+<circle class="bl" cx="557.90405" cy="599.87646" r="2" />
+<circle class="tr" cx="630.5543" cy="582.64795" r="2" />
+<text transform="translate(557.90405, 599.87646) rotate(0)" font-size="17.228516" >LIMULUS</text>
+<circle class="bl" cx="78.38335" cy="308.44458" r="2" />
+<circle class="tr" cx="152.2125" cy="294.8272" r="2" />
+<text transform="translate(78.38335, 308.44458) rotate(0)" font-size="13.617371" >DECOLOURS</text>
+<circle class="bl" cx="552.7678" cy="224.53021" r="2" />
+<circle class="tr" cx="571.44476" cy="134.52072" r="2" />
+<text transform="translate(552.7678, 134.52072) rotate(90)" fill="" font-size="18.67694" >BEDAUBED</text>
+<circle class="bl" cx="108.838844" cy="82.80623" r="2" />
+<circle class="tr" cx="186.53584" cy="50.56197" r="2" />
+<text transform="translate(108.838844, 82.80623) rotate(0)" font-size="32.24426" >CULT</text>
+<circle class="bl" cx="366.48663" cy="417.23956" r="2" />
+<circle class="tr" cx="382.99368" cy="347.63147" r="2" />
+<text transform="translate(366.48663, 347.63147) rotate(90)" fill="" font-size="16.50705" >SWOONED</text>
+<circle class="bl" cx="739.27814" cy="383.57263" r="2" />
+<circle class="tr" cx="764.6552" cy="337.71042" r="2" />
+<text transform="translate(739.27814, 337.71042) rotate(90)" fill="" font-size="25.377075" >TAG</text>
+<circle class="bl" cx="622.3808" cy="564.00616" r="2" />
+<circle class="tr" cx="635.50885" cy="477.0132" r="2" />
+<text transform="translate(635.50885, 564.00616) rotate(270)" font-size="13.128052" >PETAHERTZES</text>
+<circle class="bl" cx="366.21494" cy="466.753" r="2" />
+<circle class="tr" cx="429.77676" cy="455.02936" r="2" />
+<text transform="translate(366.21494, 466.753) rotate(0)" font-size="11.723633" >PYLORUSES</text>
+<circle class="bl" cx="495.72192" cy="285.07184" r="2" />
+<circle class="tr" cx="576.876" cy="265.82672" r="2" />
+<text transform="translate(495.72192, 285.07184) rotate(0)" font-size="19.245117" >POTFULS</text>
+<circle class="bl" cx="512.21826" cy="14.565253" r="2" />
+<circle class="tr" cx="598.55414" cy="1.5363827" r="2" />
+<text transform="translate(512.21826, 14.565253) rotate(0)" font-size="13.028871" >VINCRISTINE</text>
+<circle class="bl" cx="392.47876" cy="265.76663" r="2" />
+<circle class="tr" cx="484.6103" cy="246.64934" r="2" />
+<text transform="translate(392.47876, 265.76663) rotate(0)" font-size="19.117294" >REASONED</text>
+<circle class="bl" cx="178.48349" cy="45.189285" r="2" />
+<circle class="tr" cx="233.90201" cy="33.68994" r="2" />
+<text transform="translate(178.48349, 45.189285) rotate(0)" font-size="11.499344" >WISHLESS</text>
+<circle class="bl" cx="75.67444" cy="597.90137" r="2" />
+<circle class="tr" cx="137.98569" cy="588.49805" r="2" />
+<text transform="translate(75.67444, 597.90137) rotate(0)" font-size="9.40332" >GODDAMNDEST</text>
+<circle class="bl" cx="484.9209" cy="438.84924" r="2" />
+<circle class="tr" cx="561.2091" cy="417.74283" r="2" />
+<text transform="translate(484.9209, 438.84924) rotate(0)" font-size="21.106415" >GENOAS</text>
+<circle class="bl" cx="263.94586" cy="196.37909" r="2" />
+<circle class="tr" cx="281.58844" cy="100.72661" r="2" />
+<text transform="translate(263.94586, 100.72661) rotate(90)" fill="" font-size="17.642578" >FRILLINGS</text>
+<circle class="bl" cx="604.2916" cy="278.46994" r="2" />
+<circle class="tr" cx="615.8433" cy="208.88127" r="2" />
+<text transform="translate(615.8433, 278.46994) rotate(270)" font-size="11.551697" >ACADEMISMS</text>
+<circle class="bl" cx="148.73085" cy="184.51895" r="2" />
+<circle class="tr" cx="160.34012" cy="86.60939" r="2" />
+<text transform="translate(148.73085, 86.60939) rotate(90)" fill="" font-size="11.609268" >ISOALLOXAZINES</text>
+<circle class="bl" cx="359.6778" cy="596.2049" r="2" />
+<circle class="tr" cx="448.969" cy="583.85297" r="2" />
+<text transform="translate(359.6778, 596.2049) rotate(0)" font-size="12.351929" >PHILHELLENIC</text>
+<circle class="bl" cx="536.8908" cy="201.47476" r="2" />
+<circle class="tr" cx="550.83014" cy="134.29713" r="2" />
+<text transform="translate(536.8908, 134.29713) rotate(90)" fill="" font-size="13.939331" >MADWORTS</text>
+<circle class="bl" cx="531.4507" cy="74.99958" r="2" />
+<circle class="tr" cx="546.7527" cy="19.691204" r="2" />
+<text transform="translate(531.4507, 19.691204) rotate(90)" fill="" font-size="15.302002" >ARIARY</text>
+<circle class="bl" cx="219.31085" cy="296.92575" r="2" />
+<circle class="tr" cx="308.7408" cy="282.08038" r="2" />
+<text transform="translate(219.31085, 296.92575) rotate(0)" font-size="14.845367" >ANTIQUATED</text>
+<circle class="bl" cx="523.5014" cy="213.12906" r="2" />
+<circle class="tr" cx="536.29126" cy="143.78636" r="2" />
+<text transform="translate(523.5014, 143.78636) rotate(90)" fill="" font-size="12.789856" >EXAMINANT</text>
+<circle class="bl" cx="572.7205" cy="389.51355" r="2" />
+<circle class="tr" cx="632.5091" cy="375.3351" r="2" />
+<text transform="translate(572.7205, 389.51355) rotate(0)" font-size="14.178436" >VENDUES</text>
+<circle class="bl" cx="783.5051" cy="271.9178" r="2" />
+<circle class="tr" cx="792.12036" cy="199.2591" r="2" />
+<text transform="translate(792.12036, 271.9178) rotate(270)" font-size="8.615234" >REMEASUREMENTS</text>
+<circle class="bl" cx="35.346394" cy="364.8511" r="2" />
+<circle class="tr" cx="50.82426" cy="299.58298" r="2" />
+<text transform="translate(50.82426, 364.8511) rotate(270)" font-size="15.477867" >COFFERS</text>
+<circle class="bl" cx="75.03338" cy="584.5376" r="2" />
+<circle class="tr" cx="166.9723" cy="567.57996" r="2" />
+<text transform="translate(75.03338, 584.5376) rotate(0)" font-size="16.957642" >DESOLATER</text>
+<circle class="bl" cx="518.67303" cy="105.65307" r="2" />
+<circle class="tr" cx="531.3427" cy="36.96209" r="2" />
+<text transform="translate(531.3427, 105.65307) rotate(270)" font-size="12.669678" >FREAKIEST</text>
+<circle class="bl" cx="183.03363" cy="262.63425" r="2" />
+<circle class="tr" cx="195.76645" cy="178.26013" r="2" />
+<text transform="translate(195.76645, 262.63425) rotate(270)" font-size="12.732819" >CAMPAIGNING</text>
+<circle class="bl" cx="735.2019" cy="267.27576" r="2" />
+<circle class="tr" cx="750.0721" cy="186.65445" r="2" />
+<text transform="translate(750.0721, 267.27576) rotate(270)" font-size="14.870178" >DECAPODAN</text>
+<circle class="bl" cx="67.663" cy="356.56177" r="2" />
+<circle class="tr" cx="91.80782" cy="327.47162" r="2" />
+<text transform="translate(67.663, 327.47162) rotate(90)" fill="" font-size="24.144821" >OY</text>
+<circle class="bl" cx="298.35794" cy="462.71503" r="2" />
+<circle class="tr" cx="310.4577" cy="397.11386" r="2" />
+<text transform="translate(310.4577, 462.71503) rotate(270)" font-size="12.099762" >VEXATIOUS</text>
+<circle class="bl" cx="10.985747" cy="352.06918" r="2" />
+<circle class="tr" cx="26.079369" cy="288.4214" r="2" />
+<text transform="translate(26.079369, 352.06918) rotate(270)" font-size="15.093621" >TANNATE</text>
+<circle class="bl" cx="511.34473" cy="489.42267" r="2" />
+<circle class="tr" cx="583.02264" cy="479.50723" r="2" />
+<text transform="translate(511.34473, 489.42267) rotate(0)" font-size="9.915436" >AMELIORATIVE</text>
+<circle class="bl" cx="374.73993" cy="453.48474" r="2" />
+<circle class="tr" cx="459.81427" cy="441.71613" r="2" />
+<text transform="translate(374.73993, 453.48474) rotate(0)" font-size="11.768616" >HOMOGENIZING</text>
+<circle class="bl" cx="40.989494" cy="259.6706" r="2" />
+<circle class="tr" cx="132.48439" cy="248.82191" r="2" />
+<text transform="translate(40.989494, 259.6706) rotate(0)" font-size="10.848679" >SACCHARIMETERS</text>
+<circle class="bl" cx="686.74146" cy="304.9533" r="2" />
+<circle class="tr" cx="705.3383" cy="237.73563" r="2" />
+<text transform="translate(686.74146, 237.73563) rotate(90)" fill="" font-size="18.596863" >SENSUM</text>
+<circle class="bl" cx="89.59141" cy="241.33522" r="2" />
+<circle class="tr" cx="154.24358" cy="231.57861" r="2" />
+<text transform="translate(89.59141, 241.33522) rotate(0)" font-size="9.756607" >MICROFIBRIL</text>
+<circle class="bl" cx="452.12494" cy="184.59306" r="2" />
+<circle class="tr" cx="467.46884" cy="129.13313" r="2" />
+<text transform="translate(467.46884, 184.59306) rotate(270)" font-size="15.343903" >PARDAH</text>
+<circle class="bl" cx="765.30255" cy="267.0039" r="2" />
+<circle class="tr" cx="780.543" cy="202.73695" r="2" />
+<text transform="translate(765.30255, 202.73695) rotate(90)" fill="" font-size="15.2404785" >WORMERS</text>
+<circle class="bl" cx="495.44852" cy="68.447754" r="2" />
+<circle class="tr" cx="514.219" cy="23.217686" r="2" />
+<text transform="translate(514.219, 68.447754) rotate(270)" font-size="18.770477" >WIND</text>
+<circle class="bl" cx="265.99237" cy="481.15262" r="2" />
+<circle class="tr" cx="279.80615" cy="406.25864" r="2" />
+<text transform="translate(279.80615, 481.15262) rotate(270)" font-size="13.813782" >REFORMERS</text>
+<circle class="bl" cx="714.91223" cy="38.812996" r="2" />
+<circle class="tr" cx="766.046" cy="24.665977" r="2" />
+<text transform="translate(714.91223, 38.812996) rotate(0)" font-size="14.147018" >BESTIR</text>
+<circle class="bl" cx="422.36148" cy="283.7323" r="2" />
+<circle class="tr" cx="482.31143" cy="267.14615" r="2" />
+<text transform="translate(422.36148, 283.7323) rotate(0)" font-size="16.586151" >SAMLET</text>
+<circle class="bl" cx="641.2788" cy="382.5109" r="2" />
+<circle class="tr" cx="696.40717" cy="371.07178" r="2" />
+<text transform="translate(641.2788, 382.5109) rotate(0)" font-size="11.439117" >ALLOTYPE</text>
+<circle class="bl" cx="39.453487" cy="589.2276" r="2" />
+<circle class="tr" cx="49.738693" cy="496.289" r="2" />
+<text transform="translate(49.738693, 589.2276) rotate(270)" font-size="10.285206" >DECONSTRUCTIONS</text>
+<circle class="bl" cx="217.28554" cy="340.79462" r="2" />
+<circle class="tr" cx="271.03748" cy="329.64108" r="2" />
+<text transform="translate(217.28554, 340.79462) rotate(0)" font-size="11.153534" >ANEARING</text>
+<circle class="bl" cx="615.16254" cy="151.20499" r="2" />
+<circle class="tr" cx="680.0334" cy="135.82133" r="2" />
+<text transform="translate(615.16254, 151.20499) rotate(0)" font-size="15.383652" >OBTUSER</text>
+<circle class="bl" cx="306.17017" cy="151.20586" r="2" />
+<circle class="tr" cx="362.91287" cy="140.73997" r="2" />
+<text transform="translate(306.17017, 151.20586) rotate(0)" font-size="10.465881" >APOLOGIZE</text>
+<circle class="bl" cx="231.69908" cy="361.10703" r="2" />
+<circle class="tr" cx="288.90787" cy="350.55518" r="2" />
+<text transform="translate(231.69908, 361.10703) rotate(0)" font-size="10.551849" >MISGRADED</text>
+<circle class="bl" cx="487.04327" cy="263.31973" r="2" />
+<circle class="tr" cx="501.2031" cy="212.13971" r="2" />
+<text transform="translate(487.04327, 212.13971) rotate(90)" fill="" font-size="14.159821" >TINKLY</text>
+<circle class="bl" cx="597.5895" cy="309.7832" r="2" />
+<circle class="tr" cx="664.5668" cy="297.42963" r="2" />
+<text transform="translate(597.5895, 309.7832) rotate(0)" font-size="12.353577" >SATURNINE</text>
+<circle class="bl" cx="465.65372" cy="538.28424" r="2" />
+<circle class="tr" cx="481.21985" cy="491.3983" r="2" />
+<text transform="translate(465.65372, 491.3983) rotate(90)" fill="" font-size="15.566132" >REDUX</text>
+<circle class="bl" cx="185.73917" cy="148.9548" r="2" />
+<circle class="tr" cx="196.40398" cy="91.133575" r="2" />
+<text transform="translate(196.40398, 148.9548) rotate(270)" font-size="10.66481" >CORNETIST</text>
+<circle class="bl" cx="790.0706" cy="84.571655" r="2" />
+<circle class="tr" cx="798.7789" cy="16.374565" r="2" />
+<text transform="translate(790.0706, 16.374565) rotate(90)" fill="" font-size="8.708252" >TRANSISTORISE</text>
+<circle class="bl" cx="75.34036" cy="561.99774" r="2" />
+<circle class="tr" cx="132.57631" cy="548.4246" r="2" />
+<text transform="translate(75.34036, 561.99774) rotate(0)" font-size="13.57312" >STAYERS</text>
+<circle class="bl" cx="528.20386" cy="501.88086" r="2" />
+<circle class="tr" cx="594.61316" cy="489.63202" r="2" />
+<text transform="translate(528.20386, 501.88086) rotate(0)" font-size="12.24884" >UPROOTERS</text>
+<circle class="bl" cx="75.24185" cy="545.3336" r="2" />
+<circle class="tr" cx="86.99133" cy="474.55365" r="2" />
+<text transform="translate(75.24185, 474.55365) rotate(90)" fill="" font-size="11.749481" >REGRESSION</text>
+<circle class="bl" cx="283.07828" cy="16.494297" r="2" />
+<circle class="tr" cx="334.16858" cy="4.3785973" r="2" />
+<text transform="translate(283.07828, 16.494297) rotate(0)" font-size="12.1157" >CYMATIA</text>
+<circle class="bl" cx="613.72205" cy="442.3999" r="2" />
+<circle class="tr" cx="682.31665" cy="432.04834" r="2" />
+<text transform="translate(613.72205, 442.3999) rotate(0)" font-size="10.3515625" >ABSOLUTIZED</text>
+<circle class="bl" cx="723.811" cy="15.94913" r="2" />
+<circle class="tr" cx="769.7085" cy="0.7111521" r="2" />
+<text transform="translate(723.811, 15.94913) rotate(0)" font-size="15.237978" >SENGI</text>
+<circle class="bl" cx="335.27087" cy="583.5796" r="2" />
+<circle class="tr" cx="390.1302" cy="568.40186" r="2" />
+<text transform="translate(335.27087, 583.5796) rotate(0)" font-size="15.177734" >EMESIS</text>
+<circle class="bl" cx="404.92993" cy="27.553797" r="2" />
+<circle class="tr" cx="463.2835" cy="15.445431" r="2" />
+<text transform="translate(404.92993, 27.553797) rotate(0)" font-size="12.108366" >WRETCHED</text>
+<circle class="bl" cx="557.8307" cy="81.478714" r="2" />
+<circle class="tr" cx="630.3937" cy="71.440834" r="2" />
+<text transform="translate(557.8307, 81.478714) rotate(0)" font-size="10.03788" >OVERWATCHING</text>
+<circle class="bl" cx="683.827" cy="106.583115" r="2" />
+<circle class="tr" cx="743.7156" cy="96.64161" r="2" />
+<text transform="translate(683.827, 106.583115) rotate(0)" font-size="9.941505" >CORYBANTIC</text>
+</svg>
