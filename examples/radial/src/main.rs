@@ -20,7 +20,7 @@ fn render_block(b: &Block) {
     match b.orientation {
         Orientation::Horizontal => {
             println!(
-                "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\" >{}</text>",
+                "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\">{}</text>",
                 b.bottom_left.x, b.bottom_left.y, rec_height, b.text
             )
         }
@@ -31,9 +31,9 @@ fn render_block(b: &Block) {
                 y: b.top_right.y,
             };
             println!(
-              "<text transform=\"translate({}, {}) rotate(90)\" fill=\"\" font-size=\"{}\" >{}</text>",
-              top_left.x, top_left.y, rec_width, b.text
-          )
+                "<text transform=\"translate({}, {}) rotate(90)\" font-size=\"{}\">{}</text>",
+                top_left.x, top_left.y, rec_width, b.text
+            )
         }
         Orientation::Vertical270 => {
             // origin is bottom right
@@ -42,7 +42,7 @@ fn render_block(b: &Block) {
                 y: b.bottom_left.y,
             };
             println!(
-                "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\" >{}</text>",
+                "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\">{}</text>",
                 bottom_right.x, bottom_right.y, rec_width, b.text
             )
         }

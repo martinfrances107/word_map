@@ -7,18 +7,20 @@
 <defs>
             <style><![CDATA[
               svg{
-              --prussianBlue: #003153;
               --white: #f3ffff;
               --red: hsl(0, 100%, 50%);
               }
 
               svg{
-                background-color: var(--prussianBlue);
+                background-color: black;
               }
               /* bottom left of text block */
               .bl {
                 fill: var(--red);
                 stroke: None;
+              }
+              #background {
+                fill: url(#RadialBackground)
               }
               /* top right corner of text block */
               .tr {
@@ -35,277 +37,213 @@
                 font-weight: bold;
               }
             ]]></style>
+            <radialGradient id="RadialBackground" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" stop-color="#505050" />
+              <stop offset="100%" stop-color="black" />
+            </radialGradient>
+
           </defs>
+<rect id="background" x="0" y="0" width="800" height="600" fill="url(#RadialBackround)"/>
 <g font-family="Courier">
-<rect x="286.50522" y="281.83148" width="186.17114" height="30.904419"/>
-<circle class="bl" cx="286.50522" cy="312.7359" r="2" />
-<circle class="tr" cx="472.67636" cy="281.83148" r="2" />
-<text transform="translate(286.50522, 312.7359) rotate(0)" font-size="30.904419" >TENEBRIFIC</text>
-
-<rect x="656.2992" y="213.06825" width="30.89325" height="186.10396"/>
-<circle class="bl" cx="656.2992" cy="399.1722" r="2" />
-<circle class="tr" cx="687.19244" cy="213.06825" r="2" />
-<text transform="translate(687.19244, 399.1722) rotate(270)" font-size="30.89325" >STELLIFIES</text>
-
-<rect x="345.60928" y="82.385086" width="34.529358" height="166.40651"/>
-<circle class="bl" cx="345.60928" cy="248.7916" r="2" />
-<circle class="tr" cx="380.13864" cy="82.385086" r="2" />
-<text transform="translate(345.60928, 82.385086) rotate(90)" fill="" font-size="34.529358" >HAFTORAH</text>
-
-<rect x="169.62814" y="127.20645" width="36.900757" height="155.60562"/>
-<circle class="bl" cx="169.62814" cy="282.81207" r="2" />
-<circle class="tr" cx="206.5289" cy="127.20644" r="2" />
-<text transform="translate(169.62814, 127.20644) rotate(90)" fill="" font-size="36.900757" >RUPTURE</text>
-
-<rect x="423.81955" y="470.7575" width="143.98819" height="39.83673"/>
-<circle class="bl" cx="423.81955" cy="510.59424" r="2" />
-<circle class="tr" cx="567.80774" cy="470.7575" r="2" />
-<text transform="translate(423.81955, 510.59424) rotate(0)" font-size="39.83673" >ALKIES</text>
-
-<rect x="423.82297" y="22.03714" width="194.90823" height="29.413422"/>
-<circle class="bl" cx="423.82297" cy="51.45056" r="2" />
-<circle class="tr" cx="618.7312" cy="22.03714" r="2" />
-<text transform="translate(423.82297, 51.45056) rotate(0)" font-size="29.413422" >OVERCRAMMED</text>
-
-<rect x="181.92711" y="516.3114" width="166.21053" height="34.48871"/>
-<circle class="bl" cx="181.92711" cy="550.8001" r="2" />
-<circle class="tr" cx="348.13763" cy="516.3114" r="2" />
-<text transform="translate(181.92711, 550.8001) rotate(0)" font-size="34.48871" >AROUSERS</text>
-
-<rect x="257.7509" y="330.86212" width="176.24686" height="32.50775"/>
-<circle class="bl" cx="257.7509" cy="363.36987" r="2" />
-<circle class="tr" cx="433.99774" cy="330.86212" r="2" />
-<text transform="translate(257.7509, 363.36987) rotate(0)" font-size="32.50775" >CATCHMENT</text>
-
-<rect x="353.91006" y="387.46683" width="32.502167" height="176.21664"/>
-<circle class="bl" cx="353.91006" cy="563.6835" r="2" />
-<circle class="tr" cx="386.41223" cy="387.46683" r="2" />
-<text transform="translate(353.91006, 387.46683) rotate(90)" fill="" font-size="32.502167" >JITTERING</text>
-
-<rect x="93.99662" y="349.88336" width="32.49993" height="176.20447"/>
-<circle class="bl" cx="93.99662" cy="526.0878" r="2" />
-<circle class="tr" cx="126.49655" cy="349.88336" r="2" />
-<text transform="translate(93.99662, 349.88336) rotate(90)" fill="" font-size="32.49993" >POGROMIST</text>
-
-<rect x="0.07715607" y="123.13545" width="29.34732" height="194.4702"/>
-<circle class="bl" cx="0.07715607" cy="317.60565" r="2" />
-<circle class="tr" cx="29.424477" cy="123.13545" r="2" />
-<text transform="translate(29.424477, 317.60565) rotate(270)" font-size="29.34732" >ADVENTURING</text>
-
-<rect x="732.2654" y="266.21725" width="26.011597" height="219.37509"/>
-<circle class="bl" cx="732.2654" cy="485.59235" r="2" />
-<circle class="tr" cx="758.277" cy="266.21725" r="2" />
-<text transform="translate(732.2654, 266.21725) rotate(90)" fill="" font-size="26.011597" >PERFECTIVITIES</text>
-
-<rect x="132.61584" y="33.02307" width="36.773148" height="155.0675"/>
-<circle class="bl" cx="132.61584" cy="188.09058" r="2" />
-<circle class="tr" cx="169.38899" cy="33.02307" r="2" />
-<text transform="translate(132.61584, 33.02307) rotate(90)" fill="" font-size="36.773148" >CHORALS</text>
-
-<rect x="411.24622" y="159.4307" width="175.72803" height="32.41205"/>
-<circle class="bl" cx="411.24622" cy="191.84274" r="2" />
-<circle class="tr" cx="586.97424" cy="159.4307" r="2" />
-<text transform="translate(411.24622, 191.84274) rotate(0)" font-size="32.41205" >HAVELOCKS</text>
-
-<rect x="574.3881" y="387.75647" width="36.723877" height="154.85962"/>
-<circle class="bl" cx="574.3881" cy="542.6161" r="2" />
-<circle class="tr" cx="611.112" cy="387.75647" r="2" />
-<text transform="translate(611.112, 542.6161) rotate(270)" font-size="36.723877" >JEWELER</text>
-
-<rect x="763.89453" y="82.9314" width="25.961487" height="218.95209"/>
-<circle class="bl" cx="763.89453" cy="301.88348" r="2" />
-<circle class="tr" cx="789.856" cy="82.9314" r="2" />
-<text transform="translate(763.89453, 82.9314) rotate(90)" fill="" font-size="25.961487" >PROTECTIONISMS</text>
-
-<rect x="645.0794" y="21.450542" width="143.33691" height="39.656544"/>
-<circle class="bl" cx="645.0794" cy="61.107086" r="2" />
-<circle class="tr" cx="788.4163" cy="21.450542" r="2" />
-<text transform="translate(645.0794, 61.107086) rotate(0)" font-size="39.656544" >CRIMES</text>
-
-<rect x="597.3772" y="81.37222" width="34.331238" height="165.45166"/>
-<circle class="bl" cx="597.3772" cy="246.82388" r="2" />
-<circle class="tr" cx="631.70844" cy="81.37222" r="2" />
-<text transform="translate(631.70844, 246.82388) rotate(270)" font-size="34.331238" >COAMINGS</text>
-
-<rect x="245.4576" y="166.16788" width="36.690567" height="154.71924"/>
-<circle class="bl" cx="245.4576" cy="320.88712" r="2" />
-<circle class="tr" cx="282.14816" cy="166.16788" r="2" />
-<text transform="translate(282.14816, 320.88712) rotate(270)" font-size="36.690567" >PROSING</text>
-
-<rect x="696.6178" y="170.58806" width="28.002441" height="202.42735"/>
-<circle class="bl" cx="696.6178" cy="373.0154" r="2" />
-<circle class="tr" cx="724.62024" cy="170.58806" r="2" />
-<text transform="translate(696.6178, 170.58806) rotate(90)" fill="" font-size="28.002441" >STONEMASONRY</text>
-
-<rect x="199.03374" y="86.38513" width="143.07033" height="39.58278"/>
-<circle class="bl" cx="199.03374" cy="125.96791" r="2" />
-<circle class="tr" cx="342.10406" cy="86.38513" r="2" />
-<text transform="translate(199.03374, 125.96791) rotate(0)" font-size="39.58278" >MISFED</text>
-
-<rect x="448.59113" y="342.9934" width="193.56189" height="29.210236"/>
-<circle class="bl" cx="448.59113" cy="372.20364" r="2" />
-<circle class="tr" cx="642.153" cy="342.9934" r="2" />
-<text transform="translate(448.59113, 372.20364) rotate(0)" font-size="29.210236" >PARLIAMENTS</text>
-
-<rect x="357.3593" y="565.0782" width="210.39703" height="26.866089"/>
-<circle class="bl" cx="357.3593" cy="591.9443" r="2" />
-<circle class="tr" cx="567.75635" cy="565.0782" r="2" />
-<text transform="translate(357.3593, 591.9443) rotate(0)" font-size="26.866089" >FOOLISHNESSES</text>
-
-<rect x="54.688454" y="203.86862" width="32.279106" height="175.00723"/>
-<circle class="bl" cx="54.688454" cy="378.87585" r="2" />
-<circle class="tr" cx="86.96756" cy="203.86862" r="2" />
-<text transform="translate(54.688454, 203.86862) rotate(90)" fill="" font-size="32.279106" >RECENTEST</text>
-
-<rect x="17.056942" y="401.63812" width="29.188301" height="193.41644"/>
-<circle class="bl" cx="17.056942" cy="595.05457" r="2" />
-<circle class="tr" cx="46.245243" cy="401.63812" r="2" />
-<text transform="translate(17.056942, 401.63812) rotate(90)" fill="" font-size="29.188301" >EXTREMENESS</text>
-
-<rect x="127.61402" y="441.87476" width="164.91425" height="34.219696"/>
-<circle class="bl" cx="127.61402" cy="476.09445" r="2" />
-<circle class="tr" cx="292.52826" cy="441.87476" r="2" />
-<text transform="translate(127.61402, 476.09445) rotate(0)" font-size="34.219696" >LEISTERS</text>
-
-<rect x="724.69244" y="64.0627" width="27.934082" height="201.93312"/>
-<circle class="bl" cx="724.69244" cy="265.99582" r="2" />
-<circle class="tr" cx="752.6265" cy="64.0627" r="2" />
-<text transform="translate(752.6265, 265.99582) rotate(270)" font-size="27.934082" >WORKMANSHIPS</text>
-
-<rect x="403.89377" y="126.63511" width="193.17935" height="29.15252"/>
-<circle class="bl" cx="403.89377" cy="155.78763" r="2" />
-<circle class="tr" cx="597.0731" cy="126.63511" r="2" />
-<text transform="translate(403.89377, 155.78763) rotate(0)" font-size="29.15252" >DISHEVELING</text>
-
-<rect x="230.62305" y="53.200462" width="193.09067" height="29.139137"/>
-<circle class="bl" cx="230.62305" cy="82.3396" r="2" />
-<circle class="tr" cx="423.7137" cy="53.200462" r="2" />
-<text transform="translate(230.62305, 82.3396) rotate(0)" font-size="29.139137" >SUSURRATING</text>
-
-<rect x="695.272" y="400.9733" width="32.204346" height="174.60172"/>
-<circle class="bl" cx="695.272" cy="575.575" r="2" />
-<circle class="tr" cx="727.4763" cy="400.9733" r="2" />
-<text transform="translate(727.4763, 575.575) rotate(270)" font-size="32.204346" >RECONTACT</text>
-
-<rect x="101.77193" y="14.095688" width="30.549362" height="184.03227"/>
-<circle class="bl" cx="101.77193" cy="198.12796" r="2" />
-<circle class="tr" cx="132.32129" cy="14.095688" r="2" />
-<text transform="translate(101.77193, 14.095688) rotate(90)" fill="" font-size="30.549362" >NUCLEATING</text>
-
-<rect x="611.7971" y="396.29974" width="34.15442" height="164.59961"/>
-<circle class="bl" cx="611.7971" cy="560.89935" r="2" />
-<circle class="tr" cx="645.95154" cy="396.29974" r="2" />
-<text transform="translate(645.95154, 560.89935) rotate(270)" font-size="34.15442" >UNFRAMED</text>
-
-<rect x="761.60754" y="330.63284" width="32.200623" height="174.5817"/>
-<circle class="bl" cx="761.60754" cy="505.21454" r="2" />
-<circle class="tr" cx="793.80817" cy="330.63284" r="2" />
-<text transform="translate(761.60754, 330.63284) rotate(90)" fill="" font-size="32.200623" >ALTRICIAL</text>
-
-<rect x="394.45828" y="512.6621" width="174.55264" height="32.19525"/>
-<circle class="bl" cx="394.45828" cy="544.85736" r="2" />
-<circle class="tr" cx="569.0109" cy="512.6621" r="2" />
-<text transform="translate(394.45828, 544.85736) rotate(0)" font-size="32.19525" >EGGHEADED</text>
-
-<rect x="656.9584" y="416.05896" width="34.121094" height="164.43909"/>
-<circle class="bl" cx="656.9584" cy="580.49805" r="2" />
-<circle class="tr" cx="691.07947" cy="416.05896" r="2" />
-<text transform="translate(656.9584, 416.05896) rotate(90)" fill="" font-size="34.121094" >PRESOLVE</text>
-
-<rect x="413.18045" y="196.88242" width="174.36179" height="32.160065"/>
-<circle class="bl" cx="413.18045" cy="229.04248" r="2" />
-<circle class="tr" cx="587.54224" cy="196.88242" r="2" />
-<text transform="translate(413.18045, 229.04248) rotate(0)" font-size="32.160065" >OUTSKIRTS</text>
-
-<rect x="59.714985" y="416.4586" width="34.09525" height="164.31448"/>
-<circle class="bl" cx="59.714985" cy="580.7731" r="2" />
-<circle class="tr" cx="93.810234" cy="416.4586" r="2" />
-<text transform="translate(59.714985, 416.4586) rotate(90)" fill="" font-size="34.09525" >UNSEATED</text>
-
-<rect x="236.63568" y="15.739449" width="152.8804" height="36.254494"/>
-<circle class="bl" cx="236.63568" cy="51.993942" r="2" />
-<circle class="tr" cx="389.51608" cy="15.739449" r="2" />
-<text transform="translate(236.63568, 51.993942) rotate(0)" font-size="36.254494" >RAPHIDE</text>
-
-<rect x="65.5143" y="3.474289" width="33.886032" height="163.30618"/>
-<circle class="bl" cx="65.5143" cy="166.78047" r="2" />
-<circle class="tr" cx="99.40033" cy="3.474289" r="2" />
-<text transform="translate(99.40033, 166.78047) rotate(270)" font-size="33.886032" >ASSERTED</text>
-
-<rect x="159.55247" y="385.9556" width="182.38615" height="30.276093"/>
-<circle class="bl" cx="159.55247" cy="416.2317" r="2" />
-<circle class="tr" cx="341.93863" cy="385.9556" r="2" />
-<text transform="translate(159.55247, 416.2317) rotate(0)" font-size="30.276093" >ENRAPTURES</text>
-
-<rect x="439.79434" y="53.165493" width="141.18979" height="39.06251"/>
-<circle class="bl" cx="439.79434" cy="92.228004" r="2" />
-<circle class="tr" cx="580.98413" cy="53.165493" r="2" />
-<text transform="translate(439.79434, 92.228004) rotate(0)" font-size="39.06251" >RIOJAS</text>
-
-<rect x="210.3113" y="177.81638" width="33.799667" height="162.88998"/>
-<circle class="bl" cx="210.3113" cy="340.70636" r="2" />
-<circle class="tr" cx="244.11096" cy="177.81638" r="2" />
-<text transform="translate(244.11096, 340.70636) rotate(270)" font-size="33.799667" >MAMMOTHS</text>
-
-<rect x="384.27097" y="237.7542" width="171.9288" height="31.711319"/>
-<circle class="bl" cx="384.27097" cy="269.4655" r="2" />
-<circle class="tr" cx="556.19977" cy="237.7542" r="2" />
-<text transform="translate(384.27097, 269.4655) rotate(0)" font-size="31.711319" >POPULISTS</text>
-
-<rect x="128.94354" y="225.49052" width="28.65767" height="189.90025"/>
-<circle class="bl" cx="128.94354" cy="415.39078" r="2" />
-<circle class="tr" cx="157.60121" cy="225.49052" r="2" />
-<text transform="translate(128.94354, 225.49052) rotate(90)" fill="" font-size="28.65767" >ATTENUATING</text>
-
-<rect x="407.92712" y="400.10107" width="161.6344" height="33.539154"/>
-<circle class="bl" cx="407.92712" cy="433.64023" r="2" />
-<circle class="tr" cx="569.5615" cy="400.10107" r="2" />
-<text transform="translate(407.92712, 433.64023) rotate(0)" font-size="33.539154" >RETRONYM</text>
-
-<rect x="130.44891" y="561.8327" width="189.35242" height="28.575012"/>
-<circle class="bl" cx="130.44891" cy="590.4077" r="2" />
-<circle class="tr" cx="319.80133" cy="561.8327" r="2" />
-<text transform="translate(130.44891, 590.4077) rotate(0)" font-size="28.575012" >ELECTIONEER</text>
-
-<rect x="393.72092" y="437.35626" width="168.19437" height="31.022522"/>
-<circle class="bl" cx="393.72092" cy="468.37878" r="2" />
-<circle class="tr" cx="561.9153" cy="437.35626" r="2" />
-<text transform="translate(393.72092, 468.37878) rotate(0)" font-size="31.022522" >GARFISHES</text>
-
-<rect x="29.479408" y="106.90256" width="24.714443" height="208.43506"/>
-<circle class="bl" cx="29.479408" cy="315.33762" r="2" />
-<circle class="tr" cx="54.19385" cy="106.90255" r="2" />
-<text transform="translate(29.479408, 106.90255) rotate(90)" fill="" font-size="24.714443" >RETRIEVABILITY</text>
-
-<rect x="497.20584" y="294.68356" width="155.56882" height="32.280518"/>
-<circle class="bl" cx="497.20584" cy="326.96408" r="2" />
-<circle class="tr" cx="652.77466" cy="294.68356" r="2" />
-<text transform="translate(497.20584, 326.96408) rotate(0)" font-size="32.280518" >INFAMIES</text>
-
-<rect x="644.6577" y="66.481415" width="37.223267" height="134.54207"/>
-<circle class="bl" cx="644.6577" cy="201.02348" r="2" />
-<circle class="tr" cx="681.881" cy="66.481415" r="2" />
-<text transform="translate(681.881, 201.02348) rotate(270)" font-size="37.223267" >HOAXED</text>
-
-<rect x="148.90298" y="482.83295" width="164.58417" height="30.356628"/>
-<circle class="bl" cx="148.90298" cy="513.1896" r="2" />
-<circle class="tr" cx="313.48715" cy="482.83295" r="2" />
-<text transform="translate(148.90298, 513.1896) rotate(0)" font-size="30.356628" >DISULFIDE</text>
-
-<rect x="397.90344" y="92.37836" width="162.01678" height="29.883095"/>
-<circle class="bl" cx="397.90344" cy="122.26145" r="2" />
-<circle class="tr" cx="559.9202" cy="92.37836" r="2" />
-<text transform="translate(397.90344, 122.26145) rotate(0)" font-size="29.883095" >GLOSSIEST</text>
-
-<rect x="298.10895" y="141.97827" width="35.59848" height="128.66925"/>
-<circle class="bl" cx="298.10895" cy="270.64752" r="2" />
-<circle class="tr" cx="333.70743" cy="141.97827" r="2" />
-<text transform="translate(298.10895, 141.97827) rotate(90)" fill="" font-size="35.59848" >GADDED</text>
-
-<rect x="94.09859" y="200.34508" width="30.590134" height="147.42235"/>
-<circle class="bl" cx="94.09859" cy="347.76743" r="2" />
-<circle class="tr" cx="124.68872" cy="200.34508" r="2" />
-<text transform="translate(124.68872, 347.76743) rotate(270)" font-size="30.590134" >ANNOUNCE</text>
-
+<text transform="translate(569.38135, 182.96648) rotate(90)" font-size="50.09912">SUPINATES</text>
+<text transform="translate(138.61345, 158.27574) rotate(0)" font-size="50.495148">CABARET</text>
+<text transform="translate(555.9669, 413.83234) rotate(270)" font-size="38.965942">UNHARNESS</text>
+<text transform="translate(233.30795, 362.26443) rotate(0)" font-size="33.745514">PROTHALAMION</text>
+<text transform="translate(194.61346, 214.8382) rotate(0)" font-size="32.421646">CORROBORATORY</text>
+<text transform="translate(141.77948, 231.2485) rotate(90)" font-size="27.83284">GAINLIEST</text>
+<text transform="translate(354.6358, 421.39142) rotate(0)" font-size="41.749237">DRUM</text>
+<text transform="translate(389.8756, 504.10977) rotate(0)" font-size="21.123627">GERFALCONS</text>
+<text transform="translate(258.50726, 307.90332) rotate(0)" font-size="14.462372">CONCEALINGLY</text>
+<text transform="translate(437.76135, 226.71947) rotate(90)" font-size="10.0703125">MUNIFICENCE</text>
+<text transform="translate(314.9994, 489.07187) rotate(270)" font-size="10.0703125">SPLENDIDEST</text>
+<text transform="translate(679.7101, 384.9995) rotate(270)" font-size="10.0703125">SEMISHRUBBY</text>
+<text transform="translate(179.98476, 198.9826) rotate(90)" font-size="11.808472">HEMIOLAS</text>
+<text transform="translate(558.4205, 166.02115) rotate(0)" font-size="11.133133">ASSAULTER</text>
+<text transform="translate(275.5626, 421.0995) rotate(270)" font-size="13.635254">ASKERS</text>
+<text transform="translate(662.2583, 186.2681) rotate(270)" font-size="16.699707">LOUP</text>
+<text transform="translate(304.50937, 506.3484) rotate(0)" font-size="11.808472">BULIMIAS</text>
+<text transform="translate(166.87892, 469.1101) rotate(270)" font-size="12.623795">DRAINER</text>
+<text transform="translate(642.3082, 279.6692) rotate(270)" font-size="9.263306">SEMICONDUCTOR</text>
+<text transform="translate(132.81299, 190.48587) rotate(0)" font-size="11.133133">CORNPONES</text>
+<text transform="translate(146.42851, 503.47784) rotate(0)" font-size="11.133118">OXYMORONS</text>
+<text transform="translate(288.77676, 421.94418) rotate(0)" font-size="11.133148">FULGURANT</text>
+<text transform="translate(493.97693, 350.60272) rotate(90)" font-size="11.133118">OUTBULKED</text>
+<text transform="translate(655.5994, 357.93488) rotate(270)" font-size="14.9366455">WINGS</text>
+<text transform="translate(379.19705, 106.02028) rotate(0)" font-size="11.133133">ANTINOISE</text>
+<text transform="translate(315.33444, 228.81651) rotate(90)" font-size="11.808472">GLADIOLA</text>
+<text transform="translate(456.5394, 328.29272) rotate(0)" font-size="11.808472">PIQUANCY</text>
+<text transform="translate(411.82523, 246.0967) rotate(90)" font-size="11.133148">REITERATE</text>
+<text transform="translate(170.98001, 368.1029) rotate(90)" font-size="8.623688">IMPLICATIVENESS</text>
+<text transform="translate(274.12524, 182.18152) rotate(0)" font-size="10.070297">OVERSHADOWS</text>
+<text transform="translate(219.89502, 444.77423) rotate(90)" font-size="11.133133">REPLOTTED</text>
+<text transform="translate(505.2454, 112.38185) rotate(90)" font-size="9.263336">REGENERATIONS</text>
+<text transform="translate(209.76208, 478.89127) rotate(270)" font-size="16.699707">FOIN</text>
+<text transform="translate(196.8067, 351.58176) rotate(270)" font-size="10.561813">PLANCHETTE</text>
+<text transform="translate(254.88025, 481.84686) rotate(270)" font-size="14.936661">HOMES</text>
+<text transform="translate(501.91147, 266.6039) rotate(270)" font-size="10.0703125">BACKCOUNTRY</text>
+<text transform="translate(633.55164, 504.0492) rotate(270)" font-size="9.263306">NONIRRADIATED</text>
+<text transform="translate(410.3085, 173.3951) rotate(270)" font-size="11.133148">WONDERFUL</text>
+<text transform="translate(443.32297, 106.99204) rotate(0)" font-size="10.561821">DOGGONEDER</text>
+<text transform="translate(377.11823, 509.53506) rotate(270)" font-size="9.641571">FACILITATING</text>
+<text transform="translate(670.88635, 109.05425) rotate(270)" font-size="12.623779">ISOTONE</text>
+<text transform="translate(566.506, 18.401455) rotate(0)" font-size="8.623688">COUNTERATTACKER</text>
+<text transform="translate(483.88556, 307.66205) rotate(270)" font-size="9.641571">BUTTERFISHES</text>
+<text transform="translate(83.792114, 52.26674) rotate(90)" font-size="10.070297">ALTERNATING</text>
+<text transform="translate(734.21185, 284.58838) rotate(270)" font-size="10.561829">GONOPHORES</text>
+<text transform="translate(561.8028, 580.4578) rotate(0)" font-size="10.0703125">CATABOLIZES</text>
+<text transform="translate(73.88983, 425.07834) rotate(0)" font-size="13.635254">ANGORA</text>
+<text transform="translate(779.77045, 304.98648) rotate(90)" font-size="10.561829">AMBULACRUM</text>
+<text transform="translate(41.679764, 101.04704) rotate(90)" font-size="11.808472">GUAYULES</text>
+<text transform="translate(87.34913, 367.26352) rotate(270)" font-size="13.635246">CROUTE</text>
+<text transform="translate(648.75415, 244.19131) rotate(90)" font-size="16.699707">MOON</text>
+<text transform="translate(537.3207, 532.4556) rotate(0)" font-size="10.561829">LOXODROMES</text>
+<text transform="translate(123.80638, 416.8572) rotate(90)" font-size="11.808472">GRAUPELS</text>
+<text transform="translate(577.3077, 22.194458) rotate(90)" font-size="14.9366455">QUIRE</text>
+<text transform="translate(92.925354, 292.54138) rotate(90)" font-size="14.936668">GRIME</text>
+<text transform="translate(270.6442, 588.0273) rotate(270)" font-size="14.936661">ANCHO</text>
+<text transform="translate(386.36484, 429.8923) rotate(0)" font-size="5.904236">BOTCHERY</text>
+<text transform="translate(462.3229, 143.72084) rotate(90)" font-size="6.3118896">COURSER</text>
+<text transform="translate(770.35864, 296.4926) rotate(270)" font-size="6.817627">HONEST</text>
+<text transform="translate(124.82919, 26.307535) rotate(90)" font-size="6.3118896">OUTTASK</text>
+<text transform="translate(687.5785, 426.3374) rotate(0)" font-size="5.904236">FILMABLE</text>
+<text transform="translate(433.14523, 445.49316) rotate(0)" font-size="6.3118896">PERSIST</text>
+<text transform="translate(771.53625, 139.92505) rotate(270)" font-size="5.904236">ABSOLVER</text>
+<text transform="translate(124.7551, 338.51544) rotate(270)" font-size="4.8207855">DESCRIPTIONS</text>
+<text transform="translate(580.16187, 72.74909) rotate(90)" font-size="4.3118286">PICTORIALNESSES</text>
+<text transform="translate(737.932, 169.8708) rotate(270)" font-size="5.5665894">WELLHOUSE</text>
+<text transform="translate(795.78455, 434.7232) rotate(270)" font-size="5.280884">COCREATING</text>
+<text transform="translate(491.55847, 425.87613) rotate(270)" font-size="7.4683228">ICIER</text>
+<text transform="translate(410.30255, 66.026474) rotate(270)" font-size="5.2809143">HESITATERS</text>
+<text transform="translate(614.28644, 129.89058) rotate(270)" font-size="4.820801">NEUROTICISMS</text>
+<text transform="translate(546.1809, 39.216827) rotate(90)" font-size="6.817627">OSTOMY</text>
+<text transform="translate(791.67194, 268.92172) rotate(270)" font-size="4.631653">COMPARATIVIST</text>
+<text transform="translate(155.33142, 531.956) rotate(90)" font-size="5.566559">OUTHUSTLE</text>
+<text transform="translate(387.09537, 435.42847) rotate(0)" font-size="4.631653">GRANDSTANDING</text>
+<text transform="translate(27.786446, 539.293) rotate(90)" font-size="5.904236">ENRICHED</text>
+<text transform="translate(710.32837, 407.06012) rotate(0)" font-size="6.3118896">ZAIKAIS</text>
+<text transform="translate(658.66003, 407.14688) rotate(0)" font-size="5.0351563">SALACIOUSLY</text>
+<text transform="translate(471.0103, 591.5684) rotate(270)" font-size="6.3118896">LEGUMES</text>
+<text transform="translate(563.99335, 450.5365) rotate(270)" font-size="6.3118896">FABBEST</text>
+<text transform="translate(195.16496, 235.36327) rotate(90)" font-size="5.566574">OVERTRAIN</text>
+<text transform="translate(725.02936, 211.97112) rotate(270)" font-size="4.631653">ANTIREJECTION</text>
+<text transform="translate(548.44196, 573.9329) rotate(270)" font-size="5.904236">SCHNECKE</text>
+<text transform="translate(761.69116, 415.237) rotate(90)" font-size="5.5665894">MILIARIAS</text>
+<text transform="translate(483.08295, 205.4698) rotate(90)" font-size="6.817627">STINTS</text>
+<text transform="translate(763.48303, 284.30115) rotate(270)" font-size="4.820801">MONOLINGUALS</text>
+<text transform="translate(73.15817, 91.42198) rotate(270)" font-size="5.904236">SCHOLIUM</text>
+<text transform="translate(13.392067, 109.32183) rotate(270)" font-size="5.904236">WILDLING</text>
+<text transform="translate(114.03427, 403.02322) rotate(270)" font-size="5.904236">FOOTWORK</text>
+<text transform="translate(709.6968, 468.7905) rotate(270)" font-size="5.5665894">FLANERIES</text>
+<text transform="translate(740.981, 545.3992) rotate(0)" font-size="5.280884">PALIMONIES</text>
+<text transform="translate(728.0043, 595.1083) rotate(270)" font-size="6.3118896">MUTULAR</text>
+<text transform="translate(14.783764, 246.84834) rotate(0)" font-size="5.0351563">CUMMERBUNDS</text>
+<text transform="translate(495.4088, 71.631714) rotate(0)" font-size="6.3118896">RECEIVE</text>
+<text transform="translate(11.954308, 124.16789) rotate(90)" font-size="5.2809086">PRECEDENTS</text>
+<text transform="translate(70.36867, 588.7084) rotate(270)" font-size="4.6316605">MANUFACTORIES</text>
+<text transform="translate(473.18506, 376.47113) rotate(90)" font-size="5.0351563">HESPERIDIUM</text>
+<text transform="translate(306.36835, 597.34216) rotate(0)" font-size="5.280884">REFLOWERED</text>
+<text transform="translate(481.0879, 168.2883) rotate(90)" font-size="5.0351563">SERPENTINES</text>
+<text transform="translate(414.8267, 587.1069) rotate(270)" font-size="5.566559">PREHEATED</text>
+<text transform="translate(219.15454, 516.5587) rotate(270)" font-size="6.3118896">BRAIDER</text>
+<text transform="translate(696.55994, 399.81314) rotate(270)" font-size="4.631653">PHARMACOLOGIC</text>
+<text transform="translate(542.92346, 469.38144) rotate(0)" font-size="5.566559">BACKSTAGE</text>
+<text transform="translate(725.6646, 108.96371) rotate(0)" font-size="6.817627">NOZZLE</text>
+<text transform="translate(79.933075, 171.81902) rotate(90)" font-size="5.5665665">DERVISHES</text>
+<text transform="translate(709.9547, 140.27452) rotate(90)" font-size="5.904236">SUASIONS</text>
+<text transform="translate(522.6457, 158.48665) rotate(0)" font-size="5.0351563">POLYANDROUS</text>
+<text transform="translate(234.40141, 583.42316) rotate(270)" font-size="7.468338">LESES</text>
+<text transform="translate(699.58716, 247.45052) rotate(270)" font-size="5.280884">ALONGSHORE</text>
+<text transform="translate(556.0477, 587.4526) rotate(0)" font-size="5.0351563">EXONERATIVE</text>
+<text transform="translate(621.6692, 128.11446) rotate(270)" font-size="5.5665894">INITIALER</text>
+<text transform="translate(675.5588, 186.62975) rotate(90)" font-size="5.280884">EPILATIONS</text>
+<text transform="translate(333.0411, 292.74973) rotate(0)" font-size="5.904236">FUMBLING</text>
+<text transform="translate(349.72076, 476.00455) rotate(270)" font-size="5.2809143">WHEELHORSE</text>
+<text transform="translate(734.7332, 302.28482) rotate(90)" font-size="5.904236">ARBORIST</text>
+<text transform="translate(513.4298, 237.41327) rotate(270)" font-size="6.3118896">WHIMPER</text>
+<text transform="translate(270.1851, 475.73383) rotate(90)" font-size="5.904236">CHIVVIES</text>
+<text transform="translate(196.89493, 428.6118) rotate(0)" font-size="5.566559">BIBLICISM</text>
+<text transform="translate(522.5245, 64.173386) rotate(90)" font-size="4.820801">DECENTRALIZE</text>
+<text transform="translate(580.75507, 145.80223) rotate(0)" font-size="6.3118896">MONKERY</text>
+<text transform="translate(50.41008, 389.09448) rotate(0)" font-size="5.566559">DOGHOUSES</text>
+<text transform="translate(348.90433, 237.29346) rotate(0)" font-size="5.2809143">EMBEDDINGS</text>
+<text transform="translate(17.921925, 432.90704) rotate(0)" font-size="5.0351563">CAPTIVATORS</text>
+<text transform="translate(232.77274, 271.00183) rotate(270)" font-size="6.817627">APORIA</text>
+<text transform="translate(494.97403, 23.83604) rotate(90)" font-size="5.2809143">CATHOLICOS</text>
+<text transform="translate(555.83276, 115.358734) rotate(90)" font-size="6.3118896">SENORES</text>
+<text transform="translate(464.2127, 219.85309) rotate(270)" font-size="6.817627">BOGEYS</text>
+<text transform="translate(727.7064, 456.53595) rotate(0)" font-size="5.904236">RECHEATS</text>
+<text transform="translate(561.2803, 74.37744) rotate(270)" font-size="5.904236">VASELINE</text>
+<text transform="translate(292.5481, 567.2886) rotate(270)" font-size="4.820801">TYMPANITESES</text>
+<text transform="translate(652.27734, 208.4826) rotate(90)" font-size="5.904236">FELDSHER</text>
+<text transform="translate(45.336437, 527.25476) rotate(270)" font-size="4.8207893">STRIPTEASERS</text>
+<text transform="translate(378.0114, 585.95636) rotate(0)" font-size="5.904236">AZOTIZED</text>
+<text transform="translate(191.06512, 418.95474) rotate(0)" font-size="5.0351563">NOISINESSES</text>
+<text transform="translate(416.9964, 555.3738) rotate(0)" font-size="6.817627">SLUFFS</text>
+<text transform="translate(192.8728, 36.471603) rotate(90)" font-size="6.3118896">KNARRED</text>
+<text transform="translate(233.47702, 103.96235) rotate(0)" font-size="5.904236">POLARONS</text>
+<text transform="translate(639.31915, 407.12357) rotate(270)" font-size="8.3498535">FYKE</text>
+<text transform="translate(82.520004, 78.10421) rotate(270)" font-size="6.817627">SAMBOS</text>
+<text transform="translate(377.0958, 307.55948) rotate(270)" font-size="5.566559">SCHMOOSES</text>
+<text transform="translate(628.93115, 256.94583) rotate(270)" font-size="6.817627">PECHED</text>
+<text transform="translate(15.250969, 546.92554) rotate(270)" font-size="5.2809086">STORESHIPS</text>
+<text transform="translate(182.52707, 560.5798) rotate(0)" font-size="5.5665894">COFINANCE</text>
+<text transform="translate(407.48462, 286.7981) rotate(270)" font-size="5.566559">STUMBLERS</text>
+<text transform="translate(665.8776, 469.65622) rotate(90)" font-size="9.641602">MAY</text>
+<text transform="translate(464.72217, 61.733078) rotate(90)" font-size="5.566559">ENCHANTED</text>
+<text transform="translate(128.93973, 556.86993) rotate(270)" font-size="4.8207855">PREHARDENING</text>
+<text transform="translate(46.206093, 454.54315) rotate(0)" font-size="7.4683228">WHOLE</text>
+<text transform="translate(549.37775, 515.0113) rotate(270)" font-size="6.3118896">MARKERS</text>
+<text transform="translate(145.85648, 481.05847) rotate(270)" font-size="5.566559">FREEMASON</text>
+<text transform="translate(120.20845, 260.9815) rotate(270)" font-size="6.817627">SLEDGE</text>
+<text transform="translate(603.4656, 69.408485) rotate(90)" font-size="5.280884">SPIRITEDLY</text>
+<text transform="translate(627.7537, 111.99832) rotate(0)" font-size="5.904236">UNDENIED</text>
+<text transform="translate(21.316242, 96.23458) rotate(0)" font-size="5.2809067">PREMIERING</text>
+<text transform="translate(672.4447, 493.3839) rotate(0)" font-size="4.463196">GEMUTLICHKEITS</text>
+<text transform="translate(659.4555, 476.0891) rotate(270)" font-size="6.3118896">PICKING</text>
+<text transform="translate(395.3888, 530.3639) rotate(90)" font-size="7.4683228">BRAIL</text>
+<text transform="translate(527.0399, 452.40826) rotate(270)" font-size="4.820801">SCHOOLMASTER</text>
+<text transform="translate(687.0354, 103.4204) rotate(90)" font-size="5.904236">LUMPFISH</text>
+<text transform="translate(353.8373, 409.32748) rotate(270)" font-size="5.904236">BILLHEAD</text>
+<text transform="translate(713.5133, 51.507996) rotate(270)" font-size="6.3118896">STASHES</text>
+<text transform="translate(720.4632, 294.8895) rotate(270)" font-size="5.904236">ZEOLITES</text>
+<text transform="translate(62.692165, 136.98985) rotate(90)" font-size="5.5665627">INQUIRERS</text>
+<text transform="translate(1.0579109, 330.16376) rotate(90)" font-size="5.280909">FOLKSINGER</text>
+<text transform="translate(168.80302, 84.974815) rotate(0)" font-size="6.3118973">TANGLED</text>
+<text transform="translate(564.30597, 544.5621) rotate(0)" font-size="5.5665894">ANTISLEEP</text>
+<text transform="translate(299.43933, 282.89917) rotate(270)" font-size="5.2809143">VICEREINES</text>
+<text transform="translate(72.704315, 278.04123) rotate(90)" font-size="5.2809067">HALFTRACKS</text>
+<text transform="translate(296.4264, 68.792435) rotate(90)" font-size="5.0351563">CAPPUCCINOS</text>
+<text transform="translate(663.4864, 440.24677) rotate(0)" font-size="5.2809143">SWOOPSTAKE</text>
+<text transform="translate(634.1149, 137.10445) rotate(0)" font-size="4.8207855">CONVENTUALLY</text>
+<text transform="translate(779.46893, 32.627533) rotate(270)" font-size="7.4683228">TERNS</text>
+<text transform="translate(83.83798, 521.98376) rotate(90)" font-size="6.3118896">OUTCHID</text>
+<text transform="translate(658.0744, 538.7012) rotate(270)" font-size="5.280884">MAVOURNEEN</text>
+<text transform="translate(362.70856, 141.61584) rotate(90)" font-size="6.3118896">WEEPING</text>
+<text transform="translate(441.88223, 523.45264) rotate(90)" font-size="5.904236">DISPIRIT</text>
+<text transform="translate(63.722324, 97.23415) rotate(270)" font-size="6.817623">RANKED</text>
+<text transform="translate(224.51239, 313.62305) rotate(90)" font-size="5.0351563">HOUSELIGHTS</text>
+<text transform="translate(267.54092, 25.489426) rotate(270)" font-size="6.817627">SPATHE</text>
+<text transform="translate(773.3732, 97.416046) rotate(90)" font-size="5.5665894">CHLORDANS</text>
+<text transform="translate(220.82109, 523.62585) rotate(90)" font-size="5.2809143">CENTRIOLES</text>
+<text transform="translate(700.9261, 248.79541) rotate(90)" font-size="6.817627">XYLOID</text>
+<text transform="translate(515.29675, 169.42227) rotate(0)" font-size="5.904236">BLURRING</text>
+<text transform="translate(77.20633, 136.72406) rotate(270)" font-size="5.904236">LACUNATE</text>
+<text transform="translate(31.45361, 303.90057) rotate(270)" font-size="5.2809086">PLEASINGLY</text>
+<text transform="translate(726.07983, 177.84698) rotate(0)" font-size="5.566559">CALLIPEES</text>
+<text transform="translate(347.7584, 571.8296) rotate(90)" font-size="6.3118896">BESIEGE</text>
+<text transform="translate(413.84488, 121.09394) rotate(90)" font-size="5.0351563">ASSUAGEMENT</text>
+<text transform="translate(35.356903, 169.72339) rotate(90)" font-size="5.2809105">CLINOMETER</text>
+<text transform="translate(505.20908, 427.38275) rotate(90)" font-size="7.4683533">PINGO</text>
+<text transform="translate(109.695625, 225.50926) rotate(270)" font-size="5.904236">SCOUTHER</text>
+<text transform="translate(445.2879, 70.04556) rotate(270)" font-size="8.3498535">PTUI</text>
+<text transform="translate(545.10565, 457.55884) rotate(270)" font-size="9.641602">KEY</text>
+<text transform="translate(797.72174, 108.25181) rotate(270)" font-size="5.0351563">IMPRECISELY</text>
+<text transform="translate(33.83932, 557.8513) rotate(0)" font-size="6.3118896">RIBALDS</text>
+<text transform="translate(107.678696, 500.123) rotate(0)" font-size="6.3118896">CANELLA</text>
+<text transform="translate(478.52936, 519.1168) rotate(0)" font-size="5.5665894">SWINGEING</text>
+<text transform="translate(534.16675, 186.0227) rotate(0)" font-size="7.468338">FATWA</text>
+<text transform="translate(619.773, 64.336754) rotate(90)" font-size="5.5665894">PURPORTED</text>
+<text transform="translate(271.37698, 512.8991) rotate(0)" font-size="5.904236">WILDFOWL</text>
+<text transform="translate(34.466553, 320.92566) rotate(0)" font-size="7.4683228">WHEEP</text>
 </g>
 </svg>
