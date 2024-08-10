@@ -1,10 +1,8 @@
 extern crate word_map;
 
-use word_map::{block::Block, Orientation, Point2d};
-
-// use word_map::block::Block;
 use rand::distributions::{Distribution, WeightedIndex};
 use word_map::grid::Grid;
+use word_map::{block::Block, Orientation, Point2d};
 
 static WIDTH: f32 = 800f32;
 static HEIGHT: f32 = 600f32;
