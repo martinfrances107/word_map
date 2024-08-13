@@ -1,3 +1,15 @@
+#![deny(clippy::all)]
+#![warn(clippy::cargo)]
+#![warn(clippy::complexity)]
+#![warn(clippy::pedantic)]
+#![warn(clippy::nursery)]
+#![warn(clippy::perf)]
+#![warn(missing_debug_implementations)]
+#![warn(missing_docs)]
+//! examples/blueprint
+//!
+//! Words fitted together on a "Blueprint"
+
 extern crate word_map;
 
 // use word_map::block::Block;
@@ -33,7 +45,7 @@ fn render_block(b: &Block) {
             println!(
                 "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\" >{}</text>",
                 b.bottom_left.x, b.bottom_left.y, rec_height, b.text
-            )
+            );
         }
         Orientation::Vertical90 => {
             // origin is top left
@@ -44,7 +56,7 @@ fn render_block(b: &Block) {
             println!(
               "<text transform=\"translate({}, {}) rotate(90)\" fill=\"\" font-size=\"{}\" >{}</text>",
               top_left.x, top_left.y, rec_width, b.text
-          )
+          );
         }
         Orientation::Vertical270 => {
             // origin is bottom right
@@ -55,7 +67,7 @@ fn render_block(b: &Block) {
             println!(
                 "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\" >{}</text>",
                 bottom_right.x, bottom_right.y, rec_width, b.text
-            )
+            );
         }
     }
 }
@@ -120,7 +132,7 @@ fn main() {
         // maps to a screen area based on 24x24 squares
         let area = 24_f32 * 24_f32 * rng.gen_range(1_f32..10_f32);
         let text = random_word::gen(Lang::En).to_uppercase();
-        grid.place_block(text, area);
+        grid.place_block(&text, area);
     }
 
     for b in grid.blocks {

@@ -1,15 +1,16 @@
 [package]
 name = "radial"
 authors = { workspace = true }
-categories = ["graphics"]
 description = "A example app where large words concentrate at the center."
 edition = { workspace = true }
 license = { workspace = true }
 readme = { workspace = true }
 repository = { workspace = true }
 version = { workspace = true }
+categories = { workspace = true }
+keywords = { workspace = true }
 
 [dependencies]
 rand = "0.8.5"
 random_word = { version = "0.4.3", features = ["en"] }
-word_map = { path="../../lib"}
+word_map = { path = "../../lib" }

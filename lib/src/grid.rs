@@ -10,14 +10,17 @@ use rand::{rngs::ThreadRng, Rng};
 
 use crate::{block::Block, Point2d};
 
-// Parser only structure.
-#[derive(Debug, PartialEq)]
+/// Parser only structure.
+#[derive(Debug, Eq, PartialEq)]
 pub struct TextWeight<'a>(pub &'a str, pub u32);
 
+/// A collection of blocks.
+#[derive(Debug)]
 pub struct Grid {
     rng: ThreadRng,
     width: f32,
     height: f32,
+    /// A collection of blocks.
     pub blocks: Vec<Block>,
     // Bounding rectangle
     xmin: f32,
@@ -28,6 +31,7 @@ pub struct Grid {
 
 impl Grid {
     /// Returns a grid object given the dimension of the canvas/svg
+    #[must_use]
     pub fn new(width: f32, height: f32) -> Self {
         Self {
             rng: rand::thread_rng(),
@@ -42,7 +46,8 @@ impl Grid {
     }
 
     /// Returns the sub rectangle.
-    pub fn bounding_rectangle(&mut self) -> (f32, f32, f32, f32) {
+    #[must_use]
+    pub const fn bounding_rectangle(&self) -> (f32, f32, f32, f32) {
         (self.xmin, self.xmax, self.ymin, self.ymax)
     }
 
@@ -74,12 +79,13 @@ impl Grid {
     ///
     /// WARNING:
     /// O(n^2) operation
-    pub fn place_block(&mut self, text: String, area: f32) -> bool {
+    pub fn place_block(&mut self, text: &str, area: f32) -> bool {
         // Give a block 2000 attempts to get placed.
         // 2 orientations
         for _ in 0..2000 {
             let origin = self.point_at_random();
-            let block = Block::new_randomize_orientation(text.clone(), area, origin, &mut self.rng);
+            let block =
+                Block::new_randomize_orientation(text.to_string(), area, &origin, &mut self.rng);
             // Block must be inside the bounding rectangle.
             if self.is_inside(&block.bottom_left)
                 && self.is_inside(&block.top_right)
@@ -96,7 +102,7 @@ impl Grid {
     ///
     /// For example "apple,2 bubble,10"
     ///
-    /// This parse list can then added to the grid using 'place_block'.
+    /// This parse list can then added to the grid using `place_block`.
     pub fn parse_pairs(input: &str) -> IResult<&str, Vec<TextWeight>> {
         separated_list1(char(' '), Self::parse_text_weight)(input)
     }

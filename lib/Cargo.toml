@@ -8,6 +8,8 @@ license = { workspace = true }
 readme = { workspace = true }
 repository = { workspace = true }
 version = { workspace = true }
+categories = ["graphics"]
+keywords = ["graphics"]
 
 [dependencies]
 rand = "0.8.5"

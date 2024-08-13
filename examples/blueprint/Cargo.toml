@@ -1,7 +1,7 @@
 [package]
 name = "blueprint"
 authors = { workspace = true }
-categories = ["graphics"]
+categories = { workspace = true }
 description = "A example app from the word_map crate. word/weight pairs selected a random."
 edition = { workspace = true }
 license = { workspace = true }
@@ -12,4 +12,4 @@ version = { workspace = true }
 [dependencies]
 rand = "0.8.5"
 random_word = { version = "0.4.3", features = ["en"] }
-word_map = { path="../../lib"}
+word_map = { path = "../../lib" }

@@ -1,3 +1,14 @@
+#![deny(clippy::all)]
+#![warn(clippy::cargo)]
+#![warn(clippy::complexity)]
+#![warn(clippy::pedantic)]
+#![warn(clippy::nursery)]
+#![warn(clippy::perf)]
+#![warn(missing_debug_implementations)]
+#![warn(missing_docs)]
+//! examples/radial
+//!
+
 extern crate word_map;
 
 use rand::distributions::{Distribution, WeightedIndex};
@@ -20,7 +31,7 @@ fn render_block(b: &Block) {
             println!(
                 "<text transform=\"translate({}, {}) rotate(0)\" font-size=\"{}\">{}</text>",
                 b.bottom_left.x, b.bottom_left.y, rec_height, b.text
-            )
+            );
         }
         Orientation::Vertical90 => {
             // origin is top left
@@ -31,7 +42,7 @@ fn render_block(b: &Block) {
             println!(
                 "<text transform=\"translate({}, {}) rotate(90)\" font-size=\"{}\">{}</text>",
                 top_left.x, top_left.y, rec_width, b.text
-            )
+            );
         }
         Orientation::Vertical270 => {
             // origin is bottom right
@@ -42,31 +53,33 @@ fn render_block(b: &Block) {
             println!(
                 "<text transform=\"translate({}, {}) rotate(270)\" font-size=\"{}\">{}</text>",
                 bottom_right.x, bottom_right.y, rec_width, b.text
-            )
+            );
         }
     }
 }
 
 fn main() {
     use random_word::Lang;
+
+    // Heavily skew towards small areas.
+    static AREA_WEIGHTS: [usize; 9] = [100, 50, 1, 1, 1, 1, 1, 1, 1];
+
     let mut rng = rand::thread_rng();
 
     let mut grid = Grid::new(WIDTH, HEIGHT);
 
     // Parabolic area distribution. 1..81
     let area_values: [f32; 9] = [
-        1_f32.powf(2.),
-        2_f32.powf(2.),
-        3_f32.powf(2.),
-        4_f32.powf(2.),
-        5_f32.powf(2.),
-        6_f32.powf(2.),
-        7_f32.powf(2.),
-        8_f32.powf(2.),
-        9_f32.powf(2.),
+        1_f32.powi(2),
+        2_f32.powi(2),
+        3_f32.powi(2),
+        4_f32.powi(2),
+        5_f32.powi(2),
+        6_f32.powi(2),
+        7_f32.powi(2),
+        8_f32.powi(2),
+        9_f32.powi(2),
     ];
-    // Heavily skew towards small areas.
-    static AREA_WEIGHTS: [usize; 9] = [100, 50, 1, 1, 1, 1, 1, 1, 1];
 
     let dist = WeightedIndex::new(AREA_WEIGHTS).unwrap();
 
@@ -145,14 +158,14 @@ fn main() {
 
     // Bigests first.
     for (text, area) in sorted_iter.clone().take(n_big) {
-        grid.place_block(text.clone(), *area);
+        grid.place_block(text, *area);
     }
 
     // Open up placement to the full surface.
     grid.bounding_rectangle_clear();
 
     for (text, area) in sorted_iter.skip(n_big) {
-        grid.place_block(text.clone(), *area);
+        grid.place_block(text, *area);
     }
 
     for b in grid.blocks {

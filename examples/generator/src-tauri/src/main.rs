@@ -28,7 +28,7 @@ fn update(scale: f32, tw: &str) -> String {
         Ok((_, pairs)) => {
             let mut grid = Grid::new(WIDTH, HEIGHT);
             for TextWeight(text, weight) in pairs {
-                grid.place_block(text.to_string(), scale * weight as f32);
+                grid.place_block(text, scale * weight as f32);
             }
             let b = Blocks(grid.blocks);
 

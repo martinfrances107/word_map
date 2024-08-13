@@ -7,14 +7,20 @@ use rand::rngs::ThreadRng;
 use serde::Deserialize;
 use serde::Serialize;
 
+/// Text with meta data and bounding box.
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 pub struct Block {
+    /// The contained text.
     pub text: String,
+    /// Part of the bounding box.
     pub top_right: Point2d,
+    /// Part of the bounding box.
     pub bottom_left: Point2d,
+    /// Orientation for the text.
     pub orientation: Orientation,
 }
 
+/// Blocks - a collection of `Bslock`
 #[derive(Clone, Debug, Deserialize, Default, Serialize, PartialEq)]
 pub struct Blocks(pub Vec<Block>);
 
@@ -27,14 +33,14 @@ impl Block {
     pub(crate) fn new_randomize_orientation(
         text: String,
         area: f32,
-        origin: Point2d,
+        origin: &Point2d,
         rng: &mut ThreadRng,
     ) -> Self {
         let orientation = Orientation::at_random(rng);
         Self::new(text, area, origin, orientation)
     }
 
-    pub(crate) fn new(text: String, area: f32, origin: Point2d, orientation: Orientation) -> Self {
+    pub(crate) fn new(text: String, area: f32, origin: &Point2d, orientation: Orientation) -> Self {
         let text_height = Self::h(area, text.len() as f32);
         let text_width = area / text_height;
 
@@ -83,10 +89,10 @@ impl Block {
             }
         };
 
-        Block {
+        Self {
             text,
-            bottom_left,
             top_right,
+            bottom_left,
             orientation,
         }
     }
@@ -280,7 +286,7 @@ mod test {
 
         for (p, expected) in &VALUES {
             println!("go");
-            assert_eq!(block.is_inside(p), *expected)
+            assert_eq!(block.is_inside(p), *expected);
         }
     }
 }

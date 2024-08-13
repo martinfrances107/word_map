@@ -1,11 +1,7 @@
 [workspace]
-resolver = "2"
-members = [
-  "./lib",
-  "./examples/blueprint",
-  "./examples/radial"
-]
+members = ["./lib", "./examples/blueprint", "./examples/radial"]
 
+resolver = "2"
 [workspace.package]
 authors = ["martin <martinfrances107@hotmail.com>"]
 categories = ["graphics"]
