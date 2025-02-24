@@ -5,7 +5,7 @@ use nom::combinator::map;
 use nom::multi::separated_list1;
 use nom::sequence::separated_pair;
 use nom::IResult;
-
+use nom::Parser;
 use rand::{rngs::ThreadRng, Rng};
 
 use crate::{block::Block, Point2d};
@@ -34,7 +34,7 @@ impl Grid {
     #[must_use]
     pub fn new(width: f32, height: f32) -> Self {
         Self {
-            rng: rand::thread_rng(),
+            rng: rand::rng(),
             blocks: vec![],
             width,
             height,
@@ -104,7 +104,7 @@ impl Grid {
     ///
     /// This parse list can then added to the grid using `place_block`.
     pub fn parse_pairs(input: &str) -> IResult<&str, Vec<TextWeight>> {
-        separated_list1(char(' '), Self::parse_text_weight)(input)
+        separated_list1(char(' '), Self::parse_text_weight).parse(input)
     }
 
     // Is a point inside the bounding rectangle.
@@ -114,8 +114,8 @@ impl Grid {
 
     // Point is limited to the bounding rectangle.
     fn point_at_random(&mut self) -> Point2d {
-        let x = self.rng.gen_range(self.xmin..self.xmax);
-        let y = self.rng.gen_range(self.ymin..self.ymax);
+        let x = self.rng.random_range(self.xmin..self.xmax);
+        let y = self.rng.random_range(self.ymin..self.ymax);
         Point2d { x, y }
     }
 
@@ -136,7 +136,8 @@ impl Grid {
         map(parse_pair, |(text, weight_str)| {
             let weight = weight_str.parse::<_>().expect("must see valid u32");
             TextWeight(text, weight)
-        })(input)
+        })
+        .parse(input)
     }
 }
 

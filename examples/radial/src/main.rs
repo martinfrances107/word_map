@@ -11,7 +11,7 @@
 
 extern crate word_map;
 
-use rand::distributions::{Distribution, WeightedIndex};
+use rand::distr::{weighted::WeightedIndex, Distribution};
 use word_map::grid::Grid;
 use word_map::{block::Block, Orientation, Point2d};
 
@@ -64,7 +64,7 @@ fn main() {
     // Heavily skew towards small areas.
     static AREA_WEIGHTS: [usize; 9] = [100, 50, 1, 1, 1, 1, 1, 1, 1];
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
 
     let mut grid = Grid::new(WIDTH, HEIGHT);
 

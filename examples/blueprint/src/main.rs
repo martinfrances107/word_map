@@ -74,7 +74,7 @@ fn render_block(b: &Block) {
 
 fn main() {
     use random_word::Lang;
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
 
     let mut grid = Grid::new(WIDTH, HEIGHT);
 
@@ -130,7 +130,7 @@ fn main() {
         //
         // assuming a char width of 24px
         // maps to a screen area based on 24x24 squares
-        let area = 24_f32 * 24_f32 * rng.gen_range(1_f32..10_f32);
+        let area = 24_f32 * 24_f32 * rng.random_range(1_f32..10_f32);
         let text = random_word::gen(Lang::En).to_uppercase();
         grid.place_block(&text, area);
     }

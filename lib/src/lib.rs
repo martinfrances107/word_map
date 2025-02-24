@@ -47,7 +47,7 @@ pub enum Orientation {
 
 impl Orientation {
     fn at_random(rng: &mut ThreadRng) -> Self {
-        let i = rng.gen_range(0..3);
+        let i = rng.random_range(0..3);
         if i == 0 {
             Self::Horizontal
         } else if i == 1 {

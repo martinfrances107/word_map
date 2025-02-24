@@ -11,6 +11,6 @@ categories = { workspace = true }
 keywords = { workspace = true }
 
 [dependencies]
-rand = "0.8.5"
+rand = { version = "0.9.0" }
 random_word = { version = "0.4.3", features = ["en"] }
 word_map = { path = "../../lib" }
